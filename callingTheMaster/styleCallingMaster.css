@@ -1,0 +1,315 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Rubik', 'Arial', 'Calibri';
+}
+
+/* Шапка сайта */
+header {
+    width: 100%;
+    background-color: #0A87CF;
+    border-bottom: 1px solid rgb(11, 135, 207);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+#logo{
+    margin-right: 40px;
+}
+
+#logo img{
+    transition: all .5s;
+}
+
+#logo img:hover{
+    height: 85px;
+}
+
+#menu{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.li1{
+    background-color: #0A87CF;
+    width: max-content;
+    padding-right: 30px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+.li2{
+    background-color: #0A87CF;
+    width: 260px;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+.li3{
+    background-color: #0A87CF;
+    width: 200px;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+#menu a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fcfcfc;
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+    text-align: justify;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+#entrance{
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fcfcfc;
+    display: block;
+    text-align: justify;
+    transition: 0.5s;
+    padding-left: 10px;
+}
+
+#entrance a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fcfcfc;
+    transition: 0.5s;
+}
+
+#entrance a{
+    padding: 0;
+}
+
+#menu a:hover, #entrance a:hover{
+    font-size: 23px;
+}
+
+#menu ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0;
+    z-index: 2;
+}
+
+#menu li:hover ul{
+    display: block;
+}
+
+
+
+
+/* Тело сайта */
+section{
+    margin-top: 120px;
+    height: max-content;
+    padding: 0 10%;
+}
+
+.butt:hover{
+    cursor: pointer;
+}
+
+.crumbs a{
+    text-decoration: none;
+    color: #acacac;
+}
+
+.crumbs a:hover{
+    text-decoration: underline;
+}
+
+.crumbs{
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #acacac;
+}
+
+.Heading{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    color: #0883C9;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Форма */
+form{
+    display: flex;
+    justify-content: center;
+}
+
+form p{
+    margin-top: 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+#checkbox{
+    margin-bottom: 0;
+    margin-left: 0;
+}
+form > div > * {
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+form > div{
+    width: 500px;
+    margin-bottom: 30px;
+    border: 8px solid #0A87CF;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.textField{
+    width: 85%;
+    font-size: 18px;
+    height: 50px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 3px solid #0A87CF;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+#groupButt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.butt{
+    height: 50px;
+    white-space: normal;
+    font-size: 18px;
+    background: #0A87CF;
+    border: 3px solid #0A87CF;
+    color:#FFFFFF;
+    border-radius: 5px;
+}
+
+.butt:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.butt:active {
+    width: max-content;
+    background: #085E8D;
+    border: #085E8D;
+}
+
+#errName, #errPhone, #errTechnic, #errProblem, #errAgreement{
+    display: block;
+    font-size: 12px;
+    color:red;
+    margin-bottom: 10px;
+    height: 2em
+}
+
+#technic{
+    width: 85%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 18px;
+    resize: none;
+    background: #FFFFFF;
+    border: 3px solid #0A87CF;
+    border-radius: 10px;
+}
+
+#problem{
+    width: 80%;
+    font-size: 18px;
+    resize: none;
+    background: #FFFFFF;
+    border: 3px solid #0A87CF;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#agreementLink{
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+
+
+
+
+
+
+/* Подвал */
+footer{
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 10%;
+}
+
+#address{
+    margin-top: 0;
+}
+
+footer p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+footer a{
+    color: black;
+}
+
+svg{
+    margin-right: 15px;
+}
+
+.network{
+    text-decoration: none;
+}
+
+.network > svg{
+    transition: all 0.8s ease 0s;
+}
+.network > svg:hover{
+    transform: scale(1.2);
+}

@@ -1,0 +1,308 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Rubik', 'Arial', 'Calibri';
+}
+
+/* Шапка сайта */
+header {
+    width: 100%;
+    background-color: #0A87CF;
+    border-bottom: 1px solid rgb(11, 135, 207);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+#logo{
+    margin-right: 40px;
+}
+
+#logo img{
+    transition: all .5s;
+}
+
+#logo img:hover{
+    height: 85px;
+}
+
+#menu{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.li1{
+    background-color: #0A87CF;
+    width: max-content;
+    padding-right: 30px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+.li2{
+    background-color: #0A87CF;
+    width: 260px;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+.li3{
+    background-color: #0A87CF;
+    width: 200px;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+#menu a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fcfcfc;
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+    text-align: justify;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+#entrance{
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fcfcfc;
+    display: block;
+    text-align: justify;
+    transition: 0.5s;
+    padding-left: 10px;
+}
+
+#entrance a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fcfcfc;
+    transition: 0.5s;
+}
+
+#entrance a{
+    padding: 0;
+}
+
+#menu a:hover, #entrance a:hover{
+    font-size: 23px;
+}
+
+#menu ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0;
+    z-index: 2;
+}
+
+#menu li:hover ul{
+    display: block;
+}
+
+/* Тело сайта */
+section{
+    margin-top: 120px;
+    padding: 0 10%;
+}
+
+#crumbs{
+    margin: 30px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #acacac;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Heading{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.heading span{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    text-align: justify;
+    width: 55%;
+}
+
+.blueText{
+    color: #0A87CF;
+}
+
+.text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+    margin: 50px 0;
+}
+
+#shape{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 8px solid #0A87CF;
+    border-radius: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    width: 800px;
+}
+
+#shape p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    width: 60%;
+    margin: 30px 0;
+}
+
+#shape > div {
+    align-items: center;
+    display: flex;
+}
+
+#shape div{
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+#shape > div > div{
+    flex-direction: column;
+}
+
+.textInput{
+    font-size: 18px;
+    margin-bottom: 30px;
+    height: 50px;
+    width: 200px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 3px solid #0A87CF;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+#shape button{
+    font-size: 18px;
+    background: #0A87CF;
+    border: 3px solid #0A87CF;
+    color:#FFFFFF;
+    width: 140px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#alignmentShape{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+canvas{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px 0;
+}
+
+.modal-body{
+    padding: 0 !important;
+}
+
+.container{
+    margin: 30px 0 !important;
+}
+
+/* Подвал */
+footer{
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 10%;
+}
+
+#address{
+    margin-top: 0;
+}
+
+footer p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+footer a{
+    color: black;
+}
+
+svg{
+    margin-right: 15px;
+}
+
+.network{
+    text-decoration: none;
+}
+
+
+.network > svg{
+    transition: all 0.8s ease 0s;
+}
+.network > svg:hover{
+    transform: scale(1.2);
+}
