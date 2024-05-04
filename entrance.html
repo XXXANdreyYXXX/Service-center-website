@@ -1,173 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ремонт электронной техники</title>
-        <link href="styleRepairServices.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="shortcut icon" href="img/free-icon-electronics-5765410.png" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link href="styleRegistration.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/free-icon-electronics-5765410.png" type="image/x-icon">
+</head>
 <body>
     <!-- Шапка -->
     <header>
-        <a href="../index.html" id="logo">
-            <img src="../img/logo1.png" height="80px" alt="Тут должна быть картинка">
+        <a href="index.html" id="logo">
+            <img src="img/logo1.png" height="80px" alt="Тут должна быть картинка">
         </a>
 
         <!-- Меню -->
         <nav>
             <ul id="menu">
-                <li class="li1"><a href="../index.html">Главная</a></li>
+                <li class="li1"><a href="index.html">Главная</a></li>
                 <!-- Лабораторная 11-1 -->
                 <li class="li1"><a href="#">Каталог услуг</a>
                     <ul class="submenu">
-                        <li class="li2"><a href="laptopRepair.html">Ремонт ноутбуков</a></li>
-                        <li class="li2"><a href="computerRepair.html">Ремонт компьютеров</a></li>
-                        <li class="li2"><a href="monoblockRepair.html">Ремонт моноблоков</a></li>
-                        <li class="li2"><a href="phoneRepair.html">Ремонт телефонов</a></li>
-                        <li class="li2"><a href="tabletRepair.html">Ремонт планшетов</a></li>
-                        <li class="li2"><a href="tvRepair.html">Ремонт телевизоров</a></li>
+                        <li class="li2"><a href="Services/laptopRepair.html">Ремонт ноутбуков</a></li>
+                        <li class="li2"><a href="Services/computerRepair.html">Ремонт компьютеров</a></li>
+                        <li class="li2"><a href="Services/monoblockRepair.html">Ремонт моноблоков</a></li>
+                        <li class="li2"><a href="Services/phoneRepair.html">Ремонт телефонов</a></li>
+                        <li class="li2"><a href="#">Ремонт планшетов</a></li>
+                        <li class="li2"><a href="#">Ремонт телевизоров</a></li>
                         <li class="li2"><a href="#">Ремонт мониторов</a></li>
                         <li class="li2"><a href="#">Ремонт принтеров</a></li>
                         <li class="li2"><a href="#">Ремонт сканеров</a></li>
                         <li class="li2"><a href="#">Ремонт другой техники</a></li>
-                        <li class="li2"><a href="../callingTheMaster/callingMaster.html">Вызов мастера</a></li>
+                        <li class="li2"><a href="callingTheMaster/callingMaster.html">Вызов мастера</a></li>
                     </ul>
                 </li>
                 <!-- Лабораторная 11-2 -->
-                <li class="li1"><a href="#">Сертификаты</a></li>
-                <li class="li1"><a href="../contacts.html">Контакты</a></li>
+                <li class="li1"><a href="contacts.html">Контакты</a></li>
                 <li class="li1"><a href="#">О компании</a>
                     <ul class="submenu">
-                        <li class="li3"><a href="#">О нас</a></li>
-                        <li class="li3"><a href="../Jobs/jobs.html">Вакансии</a></li>
+                        <li class="li3"><a href="aboutTheCompany/aboutUs.html">О нас</a></li>
+                        <li class="li3"><a href="Jobs/jobs.html">Вакансии</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
 
-        <span id="entrance"><a href="../entrance.html" id="">Вход</a>&#47<a href="../registration.html">Регистрация</a></span>    
+        <!-- Вызоф функции открытие нового окна -->
+        <span id="entrance"><a href="registration.html" id="">Регистрация</a></span>
     </header>
+
 
     <!-- Тело сайта -->
     <section>
-        <span id="crumbs"><a href="../index.html">Главная</a>&#47Ремонт принтеров</span>
 
-        <p class="Heading">Профессиональный ремонт принтеров в ServiceCenter</p>
-        <p class="textAboutUs">
-            Наш сервисный центр предоставляет качественные услуги по ремонту принтеров различных марок и моделей. 
-            Мы понимаем, что принтер играет важную роль в вашей работе или деловых процессах, поэтому наши опытные 
-            техники готовы помочь вам в восстановлении его работоспособности.
-        </p>
+        <span class="crumbs"><a href="index.html">Главная</a>&#47Регистрация</span>
 
-        <p class="Heading">Почему выбирают нас:</p>
+        <!-- Форма регистрации -->
+        <p class="Heading">Форма регистрации:</p>
+        <form action="">
 
-        <ul class="list">
-            <li>Опытные специалисты: Наши инженеры обладают многолетним опытом работы с различными типами принтеров и всегда готовы помочь вам с любыми проблемами.</li>
-            <li>Качественные комплектующие: Мы используем только оригинальные детали и комплектующие или их качественные аналоги, чтобы обеспечить долгосрочную и надежную работу вашего принтера после ремонта.</li>
-            <li>Быстрый и надежный сервис: Мы стремимся предоставить быстрое и надежное обслуживание, чтобы вы могли вернуться к использованию вашего принтера как можно скорее.</li>
-        </ul>
+            <div>
+                
+                <p>Имя</p>
+                <input type="text" id="name" placeholder="Имя" autofocus class = 'textField'><br>
+                <label for="" id="errName"></label>
 
-        <p class="Heading">Популярные услуги</p>
+                <p>Пароль (не менее 8 символов)</p>
+                <input type="password" id="password" placeholder="Пароль" minlength="8" maxlength="30" class="textField"><br>
+                <label for="" id="errPassword"></label>
 
-        <div class="divTable">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Наименование услуги</th>
-                        <th>Цена (в тенге)</th>
-                        <th>Гарантия</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Замена термопленки</td>
-                        <td>От 4000</td>
-                        <td>90 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Ремонт или замена платы питания</td>
-                        <td>От 6000</td>
-                        <td>60 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Чистка механизма подачи бумаги</td>
-                        <td>От 3500</td>
-                        <td>60 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Замена или ремонт механизма подачи бумаги</td>
-                        <td>От 5000</td>
-                        <td>60 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Ремонт или замена дисплея</td>
-                        <td>От 4500</td>
-                        <td>60 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Ремонт или замена блока лазера</td>
-                        <td>От 7000</td>
-                        <td>30 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Восстановление после попадания воды</td>
-                        <td>От 8000</td>
-                        <td>60 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Ремонт или замена шлейфа</td>
-                        <td>От 5500</td>
-                        <td>60 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Калибровка и настройка</td>
-                        <td>От 5000</td>
-                        <td>30 дней</td>
-                    </tr>
-                    <tr>
-                        <td>Прошивка принтера</td>
-                        <td>От 6000</td>
-                        <td>30 дней</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <p class="Heading">Другие услуги</p>
-        <p class="testList">
-            Кроме основных видов ремонта, мы также предоставляем дополнительные услуги:
-        </p>
-        <ul class="list">
-            <li>Обновление и установка драйверов принтера.</li>
-            <li>Консультации по подбору расходных материалов (картриджей, тонеров и т. д.).</li>
-            <li>Установка и настройка дополнительных функций (например, сканирование в сеть, автоматическая двусторонняя печать).</li>
-            <li>Консультации по обслуживанию и уходу за принтером.</li>
-            <li>И так далее</li>
-        </ul>
-
-        <div class="alignmentShape">
-            <div class="shape">
-                <p >ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ЗВОНОК И ПОЛУЧИТЕ ОТВЕТЫ ПРЯМО СЕЙЧАС!</p>
-                <div>
-                    <div>
-                        <input type="text" name="username" class="textInput" placeholder="Введите ваше имя">
-                        <input type="text" name="phone" class="textInput" placeholder="+7 777 777 77 77">
-
-                        <!-- Данная кнопка при нажатии открывает список лабораторных работ -->
-                        <a href=""><button>Заказать звонок</button></a>
-
-                    </div>
-                    <img src="../img/forma.png" width="400px" alt="Тут должна быть картинка">
+                <div id="groupButt">
+                    <input type="button" class="butt" onclick="Registration()" value="Войти" style="width: 200px;"><br>
+                    <input type="button" class="butt" disabled id="conclusion" onclick="Conclusion()" value="Показать пользователя" style="width: 200px;">
                 </div>
+                
             </div>
-        </div>
+        </form>
 
+        <!-- Вывод данных -->
+        <div id="userData"></div>
     </section>
+
+
 
     <!-- Подвал -->
     <footer>
@@ -178,7 +95,7 @@
             <p><a href="mailto:servicecenter@gmail.com">Хочу у вас работать</a></p>
             <p>Наши соц. сети:</p>
             <div>
-                <a href="#" id="network">
+                <a href="#" class="network">
                     <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_25_316)">
                         <rect x="7" y="17" width="67" height="47" fill="white"/>
@@ -192,7 +109,7 @@
                     </svg>
                 </a>
 
-                <a href="#" id="network">
+                <a href="#" class="network">
                     <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_25_318)">
                         <path d="M61.25 0H18.75C8.39466 0 0 8.39466 0 18.75V61.25C0 71.6053 8.39466 80 18.75 80H61.25C71.6053 80 80 71.6053 80 61.25V18.75C80 8.39466 71.6053 0 61.25 0Z" fill="url(#paint0_radial_25_318)"/>
@@ -218,7 +135,7 @@
                     </svg>
                 </a>
 
-                <a href="#" id="network">
+                <a href="#" class="network">
                     <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_25_323)">
                         <rect x="6" y="10" width="67" height="70" fill="white"/>
@@ -238,5 +155,8 @@
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b64eb4de77de498895d5e388540082b3cfe1294693106efca6dbca04e10a4b1&amp;source=constructor" width="500" height="500" frameborder="0"></iframe>
         </div>
     </footer>
+
+    <!-- Вывод данных -->
+    <script src="entrance.js"></script>
 </body>
 </html>
