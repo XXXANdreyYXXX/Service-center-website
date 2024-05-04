@@ -324,7 +324,7 @@ svg{
     margin-top: 0;
 }
 
-.shape{
+#shape{
     box-sizing: border-box;
     background: #FFFFFF;
     border: 8px solid #0A87CF;
@@ -337,7 +337,7 @@ svg{
     width: 800px;
 }
 
-.shape p {
+#shape p {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -346,26 +346,25 @@ svg{
     margin: 30px 0;
 }
 
-.shape > div {
+#shape > div {
     align-items: center;
     display: flex;
 }
 
-.shape div{
+#shape div{
     width: max-content;
     display: flex;
     align-items: center;
 }
 
-.shape > div > div{
+#shape > div > div{
     flex-direction: column;
 }
 
 .textInput{
     font-size: 18px;
-    margin-bottom: 30px;
     height: 50px;
-    width: 200px;
+    width: 260px;
     box-sizing: border-box;
     background: #FFFFFF;
     border: 3px solid #0A87CF;
@@ -373,7 +372,16 @@ svg{
     padding-left: 20px;
 }
 
-.shape button{
+#errName, #errPhone{
+    display: block;
+    font-size: 12px;
+    color:red;
+    margin-bottom: 10px;
+    height: 2em;
+    width: 240px;
+}
+
+#shape .butt{
     font-size: 18px;
     background: #0A87CF;
     border: 3px solid #0A87CF;
@@ -383,7 +391,7 @@ svg{
     border-radius: 15px;
 }
 
-.alignmentShape{
+#alignmentShape{
     margin-top: 30px;
     width: 100%;
     display: flex;

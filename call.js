@@ -3,7 +3,7 @@ var userData = {};
 
 // Ссылки на метки для отображения ошибок
 var labelErrName = document.getElementById("errName");
-var labelErrPassword = document.getElementById("errPassword");
+var labelErrPhone = document.getElementById("errPhone");
 
 // Функция для валидации имени
 function validateName(name) {
@@ -14,24 +14,24 @@ function validateName(name) {
     return null; // Если имя прошло проверку
 }
 
-// Функция для валидации пароля
-function validatePassword(password) {
-    let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    if (!passwordPattern.test(password) || password.length < 8 || password.includes(' ')) {
-        return "Пароль должен быть длиной не менее 8 символов и включать хотя бы одну букву, цифру и специальный символ!";
+// Функция для валидации номера телефона
+function validatePhone(phone) {
+    let phonePattern = /\+7[0-9]{10}/;
+    if (!phonePattern.test(phone) || phone.length < 12 || phone.includes(' ')) {
+        return "Поле 'Телефон' должно соответствовать шаблону: +7XXXXXXXXXX";
     }
-    return null; // Если пароль прошел проверку
+    return null; // Если телефон прошел проверку
 }
 
 // Функция для регистрации пользователя
-function Entrance() {
+function Call() {
     // Очистка меток ошибок перед каждой новой проверкой
     labelErrName.innerHTML = "";
-    labelErrPassword.innerHTML = "";
+    labelErrPhone.innerHTML = "";
 
     // Получение значений из полей формы и удаление лишних пробелов
     let nameReg = document.getElementById("name").value.trim();
-    let passwordReg = document.getElementById("password").value.trim();
+    let phoneReg = document.getElementById("phone").value.trim();
 
     // Преобразование имени, если есть пробелы
     var newNameReg = '';
@@ -54,10 +54,10 @@ function Entrance() {
         errors++;
     }
 
-    // Валидация пароля
-    let passwordError = validatePassword(passwordReg);
-    if (passwordError) {
-        labelErrPassword.innerHTML = passwordError;
+    // Валидация телефона
+    let phoneError = validatePhone(phoneReg);
+    if (phoneError) {
+        labelErrPhone.innerHTML = phoneError;
         errors++;
     }
 
@@ -65,25 +65,11 @@ function Entrance() {
     if (errors == 0) {
         userData = {
             name: nameReg.charAt(0).toUpperCase() + nameReg.slice(1),
-            password: passwordReg
+            phone: phoneReg
         };
 
         document.getElementById("name").value = "";
-        document.getElementById("password").value = "";
-
-        // Разблокировка кнопки
-        document.getElementById("conclusion").disabled = false;
+        document.getElementById("phone").value = "+7";
+        location.reload();
     }
-}
-
-// Функция для вывода данных пользователя
-function Conclusion() {
-    // Вывод данных пользователя на страницу
-    userDataElement = document.getElementById("userData");
-    userDataElement.innerHTML += `<p><strong>Имя:</strong> ${userData.name}</p>
-                                <p><strong>Пароль:</strong> ${userData.password}</p>`;
-
-    // Блокировка кнопки после вывода данных
-    var button = document.getElementById("conclusion");
-    button.disabled = true;
 }

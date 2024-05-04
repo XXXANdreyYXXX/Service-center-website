@@ -287,20 +287,20 @@
 
 
         <div id="alignmentShape">
-            <div id="shape">
-                <p>ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ЗВОНОК И ПОЛУЧИТЕ ОТВЕТЫ ПРЯМО СЕЙЧАС!</p>
+            <form id="shape">
+                <p >ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ЗВОНОК И ПОЛУЧИТЕ ОТВЕТЫ ПРЯМО СЕЙЧАС!</p>
                 <div>
                     <div>
-                        <input type="text" name="username" class="textInput" placeholder="Введите ваше имя">
-                        <input type="text" name="phone" class="textInput" placeholder="+7 777 777 77 77">
-
-                        <!-- Данная кнопка при нажатии открывает список лабораторных работ -->
-                        <a href=""><button>Заказать звонок</button></a>
+                        <input type="text" id="name" class="textInput" placeholder="Имя" class = 'textField'>
+                        <label for="" id="errName"></label><br>
+                        <input type="text" id="phone" class="textInput" placeholder="+77777777777" maxlength="12" class = 'textField'>
+                        <label for="" id="errPhone"></label><br>
+                        <input type="button" class="butt" onclick="Call()" value="Заказать звонок" style="width: 260px; height: 50px;">
 
                     </div>
                     <img src="img/forma.png" width="400px" alt="Тут должна быть картинка">
                 </div>
-            </div>
+            </form>
         </div>
 
     </section>
@@ -376,5 +376,6 @@
     </footer>
 
     <script src="map.js"></script>
+    <script src="call.js"></script>
 </body>
 </html>

@@ -113,13 +113,11 @@
                 <p >ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ЗВОНОК И ПОЛУЧИТЕ ОТВЕТЫ ПРЯМО СЕЙЧАС!</p>
                 <div>
                     <div>
-                        <input type="text" name="username" class="textInput" placeholder="Введите ваше имя">
-                        <label for="" id="errName"></label>
-                        <input type="text" name="phone" class="textInput" placeholder="+7 777 777 77 77">
-                        <label for="" id="errPhone"></label>
-                        
-                        
-                        <a href=""><button>Заказать звонок</button></a>
+                        <input type="text" id="name" class="textInput" placeholder="Имя" class = 'textField'>
+                        <label for="" id="errName"></label><br>
+                        <input type="text" id="phone" class="textInput" placeholder="+77777777777" maxlength="12" class = 'textField'>
+                        <label for="" id="errPhone"></label><br>
+                        <input type="button" class="butt" onclick="Call()" value="Заказать звонок" style="width: 260px; height: 50px;">
 
                     </div>
                     <img src="img/forma.png" width="400px" alt="Тут должна быть картинка">
@@ -204,5 +202,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="photoGallery.js"></script>
+    <script src="call.js"></script>
 </body>
 </html>

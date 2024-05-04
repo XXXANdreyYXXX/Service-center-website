@@ -39,7 +39,7 @@
                     </ul>
                 </li>
                 <!-- Лабораторная 11-2 -->
-                <li class="li1"><a href="#">Сертификаты</a></li>
+                
                 <li class="li1"><a href="../contacts.html">Контакты</a></li>
                 <li class="li1"><a href="#">О компании</a>
                     <ul class="submenu">
@@ -82,21 +82,21 @@
             <li>Разное: Восстановление работы различных устройств, таких как игровые приставки, пульты управления, фотоаппараты и многое другое.</li>
         </ul>
 
-        <div class="alignmentShape">
-            <div class="shape">
+        <div id="alignmentShape">
+            <form id="shape">
                 <p >ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ЗВОНОК И ПОЛУЧИТЕ ОТВЕТЫ ПРЯМО СЕЙЧАС!</p>
                 <div>
                     <div>
-                        <input type="text" name="username" class="textInput" placeholder="Введите ваше имя">
-                        <input type="text" name="phone" class="textInput" placeholder="+7 777 777 77 77">
-
-                        <!-- Данная кнопка при нажатии открывает список лабораторных работ -->
-                        <a href=""><button>Заказать звонок</button></a>
+                        <input type="text" id="name" class="textInput" placeholder="Имя" class = 'textField'>
+                        <label for="" id="errName"></label><br>
+                        <input type="text" id="phone" class="textInput" placeholder="+77777777777" maxlength="12" class = 'textField'>
+                        <label for="" id="errPhone"></label><br>
+                        <input type="button" class="butt" onclick="Call()" value="Заказать звонок" style="width: 260px; height: 50px;">
 
                     </div>
                     <img src="../img/forma.png" width="400px" alt="Тут должна быть картинка">
                 </div>
-            </div>
+            </form>
         </div>
 
     </section>
@@ -170,5 +170,6 @@
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b64eb4de77de498895d5e388540082b3cfe1294693106efca6dbca04e10a4b1&amp;source=constructor" width="500" height="500" frameborder="0"></iframe>
         </div>
     </footer>
+    <script src="../call.js"></script>
 </body>
 </html>

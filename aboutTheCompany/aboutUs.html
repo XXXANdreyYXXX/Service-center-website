@@ -192,21 +192,21 @@
         
         <img src="../img/partners.png" id="partners" alt="Тут должна быть картинка">
 
-        <div class="alignmentShape">
-            <div class="shape">
+        <div id="alignmentShape">
+            <form id="shape">
                 <p >ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ЗВОНОК И ПОЛУЧИТЕ ОТВЕТЫ ПРЯМО СЕЙЧАС!</p>
                 <div>
                     <div>
-                        <input type="text" name="username" class="textInput" placeholder="Введите ваше имя">
-                        <input type="text" name="phone" class="textInput" placeholder="+7 777 777 77 77">
-
-                        <!-- Данная кнопка при нажатии открывает список лабораторных работ -->
-                        <a href=""><button>Заказать звонок</button></a>
+                        <input type="text" id="name" class="textInput" placeholder="Имя" class = 'textField'>
+                        <label for="" id="errName"></label><br>
+                        <input type="text" id="phone" class="textInput" placeholder="+77777777777" maxlength="12" class = 'textField'>
+                        <label for="" id="errPhone"></label><br>
+                        <input type="button" class="butt" onclick="Call()" value="Заказать звонок" style="width: 260px; height: 50px;">
 
                     </div>
                     <img src="../img/forma.png" width="400px" alt="Тут должна быть картинка">
                 </div>
-            </div>
+            </form>
         </div>
 
     </section>
@@ -280,6 +280,7 @@
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b64eb4de77de498895d5e388540082b3cfe1294693106efca6dbca04e10a4b1&amp;source=constructor" width="500" height="500" frameborder="0"></iframe>
         </div>
     </footer>
+    <script src="../call.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>

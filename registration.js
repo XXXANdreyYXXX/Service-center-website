@@ -1,6 +1,3 @@
-// Получение ссылки на поле ввода пароля
-var passwordField = document.getElementById("password");
-
 // Объект для хранения данных пользователя
 var userData = {};
 
