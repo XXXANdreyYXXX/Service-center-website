@@ -71,19 +71,6 @@ function Entrance() {
         document.getElementById("name").value = "";
         document.getElementById("password").value = "";
 
-        // Разблокировка кнопки
-        document.getElementById("conclusion").disabled = false;
+        location.reload();
     }
-}
-
-// Функция для вывода данных пользователя
-function Conclusion() {
-    // Вывод данных пользователя на страницу
-    userDataElement = document.getElementById("userData");
-    userDataElement.innerHTML += `<p><strong>Имя:</strong> ${userData.name}</p>
-                                <p><strong>Пароль:</strong> ${userData.password}</p>`;
-
-    // Блокировка кнопки после вывода данных
-    var button = document.getElementById("conclusion");
-    button.disabled = true;
 }

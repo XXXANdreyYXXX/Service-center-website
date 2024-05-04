@@ -111,20 +111,6 @@ function Registration() {
         document.getElementById("password").value = "";
         document.getElementById("agreement").checked = false;
 
-        // Разблокировка кнопки
-        document.getElementById("conclusion").disabled = false;
+        location.reload();
     }
-}
-
-// Функция для вывода данных пользователя
-function Conclusion() {
-    // Вывод данных пользователя на страницу
-    userDataElement = document.getElementById("userData");
-    userDataElement.innerHTML += `<p><strong>Имя:</strong> ${userData.name}</p>
-                                <p><strong>Телефон:</strong> ${userData.phone}</p>
-                                <p><strong>Пароль:</strong> ${userData.password}</p>`;
-
-    // Блокировка кнопки после вывода данных
-    var button = document.getElementById("conclusion");
-    button.disabled = true;
 }
