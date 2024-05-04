@@ -48,7 +48,6 @@ var repairChart = new Chart(repairCanvas, {
         plugins: {
             tooltip: {
                 // Настройки всплывающей подсказки
-                backgroundColor: 'rgba(73, 73, 73, 1)', // Цвет фона
                 titleColor: 'white', // Цвет заголовка
                 bodyColor: 'white', // Цвет текста
                 bodyFont: {
@@ -59,7 +58,6 @@ var repairChart = new Chart(repairCanvas, {
                     size: 18, // Размер заголовка
                     family: 'Rubik' // Семейство шрифта
                 },
-                cornerRadius: 0, // Радиус закругления углов
                 displayColors: false, // Отображение цветных квадратиков
             },
             legend: {
@@ -75,15 +73,15 @@ var repairChart = new Chart(repairCanvas, {
         },
         indexAxis: 'y', // Ось индексов (по оси Y)
         barPercentage: 1.0, // Процент ширины столбцов
-        animations: {
-            borderWidth: {
-                // Анимация ширины границы
-                duration: 1000, // Длительность анимации
-                easing: 'lianer', // Тип анимации
-                to: 0, // Конечное значение
-                from: 5, // Начальное значение
-                loop: true, // Повторение анимации
-            }
-        }
+        // animations: {
+        //     borderWidth: {
+        //         // Анимация ширины границы
+        //         duration: 1000, // Длительность анимации
+        //         easing: 'lianer', // Тип анимации
+        //         to: 0, // Конечное значение
+        //         from: 5, // Начальное значение
+        //         loop: true, // Повторение анимации
+        //     }
+        // }
     }
 });
