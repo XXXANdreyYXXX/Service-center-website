@@ -1,6 +1,17 @@
 function showRepairStatus() {
-    var name = document.getElementById("nameInput").value;
+    // Получаем имя и код клиента из формы
+    var name = document.getElementById("nameInput").value.trim();
     var code = document.getElementById("codeInput").value;
+    var namePattern = /^[a-zA-Zа-яА-ЯёЁ\s-]+$/;
+
+    if(name == "" || code == "" || !namePattern.test(name) || !/^\d{6}$/.test(code)){
+        $('#statusText').text("Пожалуйста, заполните все поля корректными данными.");
+        $('#repairStatusModal').modal('show');
+        return;
+    }
+
+    // Преобразуем имя к верхнему регистру
+    name = name.toUpperCase();
 
     var filePath = "data.txt";
 
@@ -11,7 +22,8 @@ function showRepairStatus() {
             var found = false;
             lines.forEach(line => {
                 var parts = line.split('@');
-                if (parts[0] === name && parts[1] === code) {
+                // Сравниваем имя и код клиента
+                if (parts[0].toUpperCase() === name && parts[1] === code) {
                     var status = parts[2];
                     var comment = parts.slice(3).join('@');
 
@@ -27,7 +39,7 @@ function showRepairStatus() {
             });
             if (!found) {
                 $('#statusText').text("Запись не найдена!");
-                $('#commentText').text();
+                $('#commentText').text('');
                 $('#repairStatusModal').modal('show');
             }
         })
