@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статус</title>
+    <style>
+        /* Для браузеров на основе WebKit (например, Chrome, Safari) */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        /* Для Firefox */
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>Имя клиента</p>
+        <input type="text" placeholder="Введите ваше имя" id="nameInput">
+        <p>Код клианта</p>
+        <input type="number" placeholder="Введите код клиента" id="codeInput"><br><br>
+        <input type="button" value="Показать" onclick="showRepairStatus()">
+    </form>
+    <script src="123.js"></script>
+</body>
+</html>
