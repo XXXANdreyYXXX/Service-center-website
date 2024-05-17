@@ -17,7 +17,9 @@ function showRepairStatus() {
 
                     // Выводим данные в модальном окне
                     $('#statusText').text("Статус ремонта: " + status);
-                    $('#commentText').text("Комментарий: " + comment);
+                    if(comment != ""){
+                        $('#commentText').text("Комментарий: " + comment);
+                    }
                     $('#repairStatusModal').modal('show');
 
                     found = true;
