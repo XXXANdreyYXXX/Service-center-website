@@ -21,20 +21,21 @@
             width: 100%;
         }
 
-        .menu{
-            width: 100%;
-            position: fixed;
-            z-index: 1;
-        }
-
-        section{
-            padding-top: 100px;
-        }
-
         .nav-link {
             color: white !important;
         }
 
+        @media (min-width: 993px){
+            .menu{
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+            }
+
+            section{
+                padding-top: 120px;
+            }
+        }
 
         @media (max-width: 992px){
             .dropdown-item{
@@ -43,6 +44,12 @@
             .dropdown-menu{
                 background-color: #0d6efd;
                 border: none;
+            }
+            .menu{
+                position: relative;
+            }
+            .section{
+                padding-top: 0;
             }
         }
 
@@ -106,7 +113,72 @@
                 <input type="button" value="Показать" onclick="showRepairStatus()">
             </form>
         </div>
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+            <ol class="carousel-indicators">
+                <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+                <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/slide1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="headingSlide">Большой опыт</p>
+                        <!-- <p class="textSlide">
+                            Наши мастера имеют большой опыт в ремонте компьютерной техники и внушительный навык 
+                            в обслуживании как домашних, так и корпоративных клиентов, гарантируя качественное 
+                            выполнение работ любой сложности.
+                        </p> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/slide2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="headingSlide">Большой ассортимент</p>
+                        <p class="textSlide">
+                            В нашем магазине вы найдете широкий ассортимент аксессуаров для телефонов на любой вкус: 
+                            чехлы, защитные пленки, наушники, зарядные устройства, держатели и многое другое, что поможет 
+                            вам сделать ваш телефон еще более функциональным и стильным. Мы следим за последними тенденциями 
+                            в мире мобильных технологий, чтобы предложить вам только лучшие и инновационные решения.
+                        </p>
+                    </div>
+                </div>
+                    <div class="carousel-item">
+                    <img src="../img/slide3.png" class="d-block w-100" alt="..." >
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="headingSlide">Приемлемые цены</p>
+                        <p class="textSlide">
+                            В нашем магазине вы обнаружите не только самые передовые продукты, но и приемлемые цены, 
+                            которые делают технологии доступными для всех. Мы стремимся предложить вам лучшее соотношение 
+                            цены и качества, чтобы каждый мог наслаждаться преимуществами современных устройств без лишних затрат.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
     </section>
+  
+    
+
+
+
+
+
+
+
+
     
     <!-- Modal -->
     <div class="modal fade" id="repairStatusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,48 +198,7 @@
         </div>
         </div>
     </div>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-
-    <p>1</p>
+    
     
 
     <!-- Подключаем Bootstrap JS и наш собственный JS -->
