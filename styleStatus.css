@@ -26,6 +26,7 @@ html, body{
 }
 
 /* Тело */
+
 .formDiv{
     display: flex;
     width: 100%;
