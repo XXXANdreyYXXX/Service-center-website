@@ -50,6 +50,11 @@
             background-color: #0d6efd;
         }
 
+        .navbar-toggler{
+            border-width: 3px !important;
+            border-color: rgba(255, 255, 255, 0.55) !important;
+        }
+
         form input[type=text],form input[type=number]{
                 margin-bottom: 16px;
         }
@@ -89,7 +94,7 @@
             margin: 10px 0;
         }
 
-        footer a{
+        .link{
             color: black;
         }
 
@@ -112,15 +117,6 @@
         iframe{
             width: 100%;
             height: 100%;
-        }
-
-        .dropdown-item{
-            color:white;
-        }
-
-        .navbar-toggler{
-            border-width: 3px !important;
-            border-color: rgba(255, 255, 255, 0.55) !important;
         }
 
         @media (min-width: 992px){
@@ -151,7 +147,7 @@
             }
 
             .dropdown-item{
-                --bs-dropdown-link-color: white;
+                color: white !important;
             }
             .dropdown-menu{
                 background-color: #0d6efd;
@@ -301,7 +297,7 @@
 
     <section>
         <div class="container">
-            <p class="breadcrumbs"><a href="index.html" class="interpreter">Главная</a>/Статус ремонта</p>
+            <p class="breadcrumbs"><a href="index.html" class="interpreter">Главная</a> > Статус ремонта</p>
 
             <p>Дорогие клиенты! Теперь вы сами можете контролировать процесс ремонта вашего оборудования. Чтобы узнать текущий 
                 статус всех ваших заказов, просто укажите код клиента и ваше имя, указанные в приемном талоне.</p>
@@ -363,9 +359,9 @@
         <div class="container">
             <div>
                 <p id="address">Наш адрес: ул. Магжана Жумабаева 114</p>
-                <p>Телефон: <a href="tel: +77478061122">+7-747-806-11-22</a></p>
-                <p>Email: <a href="mailto:servicecenter@gmail.com">servicecenter@gmail.com</a></p>
-                <p><a href="mailto:servicecenter@gmail.com">Хочу у вас работать</a></p>
+                <p>Телефон: <a href="tel: +77478061122" class="link">+7-747-806-11-22</a></p>
+                <p>Email: <a href="mailto:servicecenter@gmail.com" class="link">servicecenter@gmail.com</a></p>
+                <p><a href="mailto:servicecenter@gmail.com" class="link">Хочу у вас работать</a></p>
                 <p>Наши соц. сети:</p>
                 <div>
                     <a href="#" class="network">
