@@ -1,6 +1,7 @@
 html, body{
     width: 100%;
 }
+
 /* Меню */
 .nav-link {
     color: white !important;
@@ -17,6 +18,11 @@ html, body{
 
 .interpreter:hover{
     text-decoration: underline;
+}
+
+.nav-link, .dropdown-menu, .dropdown-item{
+    font-weight: 500;
+    font-size: 18px;
 }
 
 /* Тело */
