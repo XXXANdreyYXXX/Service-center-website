@@ -148,8 +148,8 @@ iframe{
         color: white !important;
     }
     .dropdown-menu{
-        background-color: #0d6efd;
-        border: none;
+        background-color: #0d6efd !important;
+        border: none !important;
     }
     .menu{
         position: relative;
