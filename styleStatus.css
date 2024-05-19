@@ -25,15 +25,6 @@ html, body{
     font-size: 18px;
 }
 
-/* Тело */
-
-.formDiv{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .menu{
     background-color: #0d6efd;
 }
@@ -41,6 +32,15 @@ html, body{
 .navbar-toggler{
     border-width: 3px !important;
     border-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Тело */
+
+.formDiv{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 form input[type=text],form input[type=number]{

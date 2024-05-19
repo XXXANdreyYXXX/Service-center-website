@@ -126,9 +126,9 @@ header {
 
 /* Тело сайта и подвал*/
 section{
-    margin-top: 120px;
+    margin-top: 116px;
     height: max-content;
-    padding: 0 10%;
+    /* padding: 0 10%; */
 }
 
 #crumbs a{
@@ -184,12 +184,6 @@ section{
 }
 
 .textAboutUs:last-of-type {
-    margin-bottom: 50px;
-}
-
-#slaider{
-    width: 100%;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 

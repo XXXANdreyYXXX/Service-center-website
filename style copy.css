@@ -1,0 +1,250 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Rubik', 'Arial', 'Calibri';
+}
+
+/* Меню */
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover{
+    color:#cadfff !important;
+}
+
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+}
+
+.interpreter:hover{
+    text-decoration: underline;
+}
+
+.nav-link, .dropdown-menu, .dropdown-item{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.menu{
+    background-color: #0d6efd;
+}
+
+.navbar-brand img{
+    height: 80% !important;
+    width: 80% !important;
+}
+
+
+@media (min-width: 992px){
+    .menu{
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+
+    section{
+        padding-top: 85px;
+    }
+
+    .map{
+        height: 500px;
+        width: 500px;
+    }
+}
+
+
+
+
+/* Тело сайта
+section{
+    margin-top: 120px;
+    padding: 0 10%;
+}
+
+#crumbs{
+    margin: 30px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #acacac;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Heading{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.heading span{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    text-align: justify;
+    width: 55%;
+}
+
+.blueText{
+    color: #0A87CF;
+}
+
+.text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+    margin: 50px 0;
+}
+
+#shape{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 8px solid #0A87CF;
+    border-radius: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    width: 800px;
+}
+
+#shape p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    width: 60%;
+    margin: 30px 0;
+}
+
+#shape > div {
+    align-items: center;
+    display: flex;
+}
+
+#shape div{
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+#shape > div > div{
+    flex-direction: column;
+}
+
+.textInput{
+    font-size: 18px;
+    height: 50px;
+    width: 260px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 3px solid #0A87CF;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+.butt{
+    font-size: 18px;
+    background: #0A87CF;
+    border: 3px solid #0A87CF;
+    color:#FFFFFF;
+    width: 140px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#alignmentShape{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+canvas{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px 0;
+}
+
+.modal-body{
+    padding: 0 !important;
+}
+
+.container{
+    margin: 30px 0 !important;
+}
+
+#errName, #errPhone{
+    display: block;
+    font-size: 12px;
+    color:red;
+    margin-bottom: 10px;
+    height: 2em;
+    width: 240px;
+}
+
+Подвал
+footer{
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 10%;
+}
+
+#address{
+    margin-top: 0;
+}
+
+footer p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+footer a{
+    color: black;
+}
+
+svg{
+    margin-right: 15px;
+}
+
+.network{
+    text-decoration: none;
+}
+
+
+.network > svg{
+    transition: all 0.8s ease 0s;
+}
+.network > svg:hover{
+    transform: scale(1.2);
+} */
