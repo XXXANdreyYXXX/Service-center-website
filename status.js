@@ -4,6 +4,7 @@ function showRepairStatus() {
     var code = document.getElementById("codeInput").value;
     var namePattern = /^[a-zA-Zа-яА-ЯёЁ\s-]+$/;
 
+    //Проверка данных
     if(name == "" || code == "" || !namePattern.test(name) || !/^\d{6}$/.test(code)){
         $('#statusText').text("Пожалуйста, заполните все поля корректными данными.");
         $('#repairStatusModal').modal('show');
