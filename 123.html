@@ -7,6 +7,7 @@
     <!-- Подключаем Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+
         /* Для браузеров на основе WebKit (например, Chrome, Safari) */
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
@@ -25,6 +26,10 @@
             color: white !important;
         }
 
+        .nav-link:hover{
+            color:#cadfff !important;
+        }
+
         .interpreter, .breadcrumbs {
             color: rgb(127, 127, 127);
             text-decoration: none;
@@ -34,7 +39,32 @@
             text-decoration: underline;
         }
 
-        
+        .formDiv{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu{
+            background-color: #0d6efd;
+        }
+
+        form input[type=text],form input[type=number]{
+                margin-bottom: 16px;
+        }
+
+        .formDiv img{
+                width: 60%;
+        }
+
+        form label{
+            padding-bottom: 8px;
+        }
+
+        p{
+            text-align: justify;
+        }
 
         @media (min-width: 993px){
             .menu{
@@ -44,13 +74,22 @@
             }
 
             section{
-                padding-top: 120px;
+                padding-top: 116px;
+            }
+
+            form{
+                width: 30%;
             }
         }
 
         @media (max-width: 992px){
+
+            section{
+                padding-top: 16px;
+            }
+
             .dropdown-item{
-            --bs-dropdown-link-color: white;
+                --bs-dropdown-link-color: white;
             }
             .dropdown-menu{
                 background-color: #0d6efd;
@@ -64,19 +103,73 @@
             }
         }
 
-        @media (max-width: 550px){
+        @media (max-width: 768px){
+            .formDiv{
+                flex-direction: column-reverse;
+            }
+
+            .formDiv img{
+                margin-bottom: 16px;
+            }
+
+            form, .formDiv img{
+                width: 100%;
+            }
+
+            form{
+                width: 60%;
+            }
+
+            .btn{
+                width: 100%;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+
+            .formDiv{
+                display: flex;
+                flex-direction: row;
+            }
+
+            .formDiv img{
+                width: 60%;
+                margin-left: 10%;
+            }
+
+            form input{
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 575px){
+
+            .buttDiv{
+                align-items: center;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .btn{
+                width: 100%;
+            }
+        }
+
+        /* @media (max-width: 550px){
             .carousel-caption p{
                 display: none;
             }
-        }
+        } */
 
     </style>
 </head>
 <body>
 
-    <div class="menu">
-        <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-            <div class="container">
+    <nav class="menu">
+        <div class="container">
+            <div class="navbar navbar-dark bg-primary navbar-expand-lg">
                 <a class="navbar-brand" href="#">
                     <img src="img/Logo.svg" alt="">
                 </a>
@@ -108,10 +201,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Контакты</a>
+                            <a href="contacts.html" class="nav-link">Контакты</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">О компании</a>
+                            <a href="aboutTheCompany/aboutUs.html" class="nav-link">О компании</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">Статус ремонта</a>
@@ -119,37 +212,38 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
 
     <section>
         <div class="container">
-
             <p class="breadcrumbs"><a href="index.html" class="interpreter">Главная</a>/Статус ремонта</p>
 
             <p>Дорогие клиенты! Теперь вы сами можете контролировать процесс ремонта вашего оборудования. Чтобы узнать текущий 
                 статус всех ваших заказов, просто укажите код клиента и ваше имя, указанные в приемном талоне.</p>
 
+            <div class="formDiv">
 
-            <form>
-                <div class="form-group">
-                    <label>Ваше Имя</label>
-                    <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Введите ваше имя" autofocus>
-                </div>
-                <div class="form-group">
-                    <label>Код клинта</label>
-                    <input type="number" class="form-control" id="codeInput" placeholder="Введи код клиента с талона">
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Соглашение на обработку данных</label>
-                </div>
-                <input type="button" class="btn btn-primary" value="Показать" onclick="showRepairStatus()">
-            </form>
+                <form>
+                    <div class="form-group">
+                        <label>Ваше Имя</label>
+                        <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Введите ваше имя" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label>Код клинта (минимум 6 цифр)</label>
+                        <input type="number" class="form-control" id="codeInput" placeholder="Введи код клиента с талона">
+                    </div>
+                    <div class="buttDiv">
+                        <input type="button" class="btn btn-primary" value="Показать" onclick="showRepairStatus()">
+                    </div>
+                </form>
+    
+                <img src="img/Ticket1.png" class="imgExemple" alt="">
 
-            <img src="img/Ticket.png" alt="">
+            </div>
         </div>
+        
     </section>
   
     
@@ -165,19 +259,19 @@
     <!-- Окно статуса ремонта -->
     <div class="modal fade" id="repairStatusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Статус ремонта</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Статус ремонта</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="statusText"></p>
+                    <p id="commentText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <p id="statusText"></p>
-                <p id="commentText"></p>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-            </div>
-        </div>
         </div>
     </div>
     
