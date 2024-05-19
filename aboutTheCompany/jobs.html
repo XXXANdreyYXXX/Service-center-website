@@ -3,85 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-    <link href="styleRegistration.css" rel="stylesheet">
+    <title>Ремонт электронной техники</title>
+    <link href="styleJobs.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="../img/free-icon-electronics-5765410.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/free-icon-electronics-5765410.png" type="image/x-icon">
 </head>
 <body>
+
     <!-- Шапка -->
     <header>
-        <a href="index.html" id="logo">
-            <img src="img/logo1.png" height="80px" alt="Тут должна быть картинка">
+        <a href="../index.html" id="logo">
+            <img src="../img/logo1.png" height="80px" alt="Тут должна быть картинка">
         </a>
 
         <!-- Меню -->
         <nav>
             <ul id="menu">
-                <li class="li1"><a href="index.html">Главная</a></li>
+                <li class="li1"><a href="../index.html">Главная</a></li>
                 <!-- Лабораторная 11-1 -->
                 <li class="li1"><a href="#">Каталог услуг</a>
                     <ul class="submenu">
-                        <li class="li2"><a href="Services/laptopRepair.html">Ремонт ноутбуков</a></li>
-                        <li class="li2"><a href="Services/computerRepair.html">Ремонт компьютеров</a></li>
-                        <li class="li2"><a href="Services/monoblockRepair.html">Ремонт моноблоков</a></li>
-                        <li class="li2"><a href="Services/phoneRepair.html">Ремонт телефонов</a></li>
-                        <li class="li2"><a href="Services/tabletRepair.html">Ремонт планшетов</a></li>
-                        <li class="li2"><a href="Services/tvRepair.html">Ремонт телевизоров</a></li>
-                        <li class="li2"><a href="Services/monitorRepair.html">Ремонт мониторов</a></li>
-                        <li class="li2"><a href="Services/printerRepair.html">Ремонт принтеров</a></li>
-                        <li class="li2"><a href="Services/scannerRepair.html">Ремонт сканеров</a></li>
-                        <li class="li2"><a href="Services/otherEquipmentRepair.html">Ремонт другой техники</a></li>
-                        <li class="li2"><a href="callingTheMaster/callingMaster.html">Вызов мастера</a></li>
+                        <li class="li2"><a href="../Services/computerRepair.html">Ремонт компьютеров</a></li>
+                        <li class="li2"><a href="../Services/laptopRepair.html">Ремонт ноутбуков</a></li>
+                        <li class="li2"><a href="../Services/monoblockRepair.html">Ремонт моноблоков</a></li>
+                        <li class="li2"><a href="../Services/phoneRepair.html">Ремонт телефонов</a></li>
+                        <li class="li2"><a href="../Services/tabletRepair.html">Ремонт планшетов</a></li>
+                        <li class="li2"><a href="../Services/tvRepair.html">Ремонт телевизоров</a></li>
+                        <li class="li2"><a href="../Services/monitorRepair.html">Ремонт мониторов</a></li>
+                        <li class="li2"><a href="../Services/printerRepair.html">Ремонт принтеров</a></li>
+                        <li class="li2"><a href="../Services/scannerRepair.html">Ремонт сканеров</a></li>
+                        <li class="li2"><a href="../Services/otherEquipmentRepair.html">Ремонт другой техники</a></li>
+                        <li class="li2"><a href="../callingTheMaster/callingMaster.html">Вызов мастера</a></li>
                     </ul>
                 </li>
                 <!-- Лабораторная 11-2 -->
-                <li class="li1"><a href="contacts.html">Контакты</a></li>
+                
+                <li class="li1"><a href="../contacts.html">Контакты</a></li>
                 <li class="li1"><a href="#">О компании</a>
                     <ul class="submenu">
-                        <li class="li3"><a href="aboutTheCompany/aboutUs.html">О нас</a></li>
-                        <li class="li3"><a href="Jobs/jobs.html">Вакансии</a></li>
+                        <li class="li3"><a href="aboutUs.html">О нас</a></li>
+                        <li class="li3"><a href="#">Вакансии</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
 
-        <!-- Вызоф функции открытие нового окна -->
-        <span id="entrance"><a href="registration.html" id="">Регистрация</a></span>
+        <span id="entrance"><a href="../entrance.html" id="">Вход</a>&#47<a href="../registration.html">Регистрация</a></span>    
     </header>
-
 
     <!-- Тело сайта -->
     <section>
+        <span id="crumbs"><a href="../index.html">Главная</a>&#47Вакансии</span>
 
-        <span class="crumbs"><a href="index.html">Главная</a>&#47Регистрация</span>
+        <p class="Heading">ВАКАНСИИ</p>
 
-        <!-- Форма регистрации -->
-        <p class="Heading">Форма входа:</p>
-        <form action="">
+        <p class="textAboutUs">
+            Мы — ведущая компания в области обслуживания и ремонта электроники, специализирующаяся 
+            на качественном и профессиональном обслуживании клиентов. Наша миссия заключается в обеспечении 
+            надежных и эффективных решений для всех видов электронных устройств.
+        </p>
 
-            <div>
-                
-                <p>Имя</p>
-                <input type="text" id="name" placeholder="Имя" autofocus class = 'textField'><br>
-                <label for="" id="errName"></label>
+        <p class="Heading">Обязанности:</p>
 
-                <p>Пароль (не менее 8 символов)</p>
-                <input type="password" id="password" placeholder="Пароль" minlength="8" maxlength="30" class="textField"><br>
-                <label for="" id="errPassword"></label>
+        <ul class="list">
+            <li>Диагностика и ремонт различных электронных устройств, включая смартфоны, ноутбуки, планшеты, и другую электронику.</li>
+            <li>Выполнение технического обслуживания и профилактических работ.</li>
+            <li>Проведение детального анализа проблемы и разработка оптимальных решений.</li>
+            <li>Соблюдение стандартов безопасности и качества во всех аспектах работы.</li>
+        </ul>
 
-                <input type="button" class="butt" onclick="Entrance()" value="Войти" style="width: 85%;"><br>
-                
-            </div>
-        </form>
+        <p class="Heading">Требования:</p>
 
-        <!-- Вывод данных -->
-        <div id="userData"></div>
+        <ul class="list">
+            <li>Опыт работы в сфере ремонта электроники от 2 лет.</li>
+            <li>Знание принципов работы различных электронных устройств и компонентов.</li>
+            <li>Умение пользоваться современным оборудованием и инструментами для ремонта.</li>
+            <li>Высокий уровень ответственности и внимательность к деталям.</li>
+            <li>Готовность к обучению и совершенствованию навыков.</li>
+        </ul>
+
+        <p class="Heading">Условия:</p>
+
+        <ul class="list">
+            <li>Конкурентная заработная плата, соответствующая опыту и квалификации.</li>
+            <li>Гибкий график работы.</li>
+            <li>Возможность профессионального роста и развития.</li>
+            <li>Дружелюбный и поддерживающий коллектив.</li>
+            <li>Современное рабочее оборудование и инструменты.</li>
+        </ul>
+
+        <p class="Heading">Как подать заявку:</p>
+        <p class="textAboutUs">
+            Если вы готовы присоединиться к нашей команде и внести свой вклад в развитие 
+            компании, отправьте свое резюме на адрес 
+            <a href="mailto:servicecenter@gmail.com">
+                servicecenter@gmail.com
+            </a> 
+            Просим указать в теме письма "Вакансия: Мастер по ремонту электроники". Мы рассмотрим каждое 
+            резюме и свяжемся с подходящими кандидатами для уточнения деталей.
+        </p>
+        
     </section>
-
-
 
     <!-- Подвал -->
     <footer>
@@ -152,8 +176,5 @@
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b64eb4de77de498895d5e388540082b3cfe1294693106efca6dbca04e10a4b1&amp;source=constructor" width="500" height="500" frameborder="0"></iframe>
         </div>
     </footer>
-
-    <!-- Вывод данных -->
-    <script src="entrance.js"></script>
 </body>
 </html>
