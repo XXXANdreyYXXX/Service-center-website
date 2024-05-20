@@ -21,6 +21,7 @@ var repairData = {
 var repairChart = new Chart(repairCanvas, {
     type: 'bar', // Тип графика
     data: repairData, // Данные для отображения
+    response: true,
     options: {
         scales: {
             x: {

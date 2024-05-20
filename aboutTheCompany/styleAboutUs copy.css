@@ -50,10 +50,17 @@
     text-align: justify;
 }
 
-
 .heading{
     margin: 16px 0;
     text-align: center;
+}
+
+.textName{
+    margin: 0;
+}
+
+.card{
+    margin-bottom: 16px;
 }
 
 .orderCall{
@@ -150,10 +157,15 @@ iframe{
     .aboutUs{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .aboutUs div{
-        width: 50%;
+        width: 55%;
+    }
+
+    .aboutUs img{
+        height: 100%;
     }
 
     .map{
@@ -184,11 +196,14 @@ iframe{
         position: relative;
     }
 
-    .headingImg{
-        width: 50%;
+    .aboutUs{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
-    .iphoneImg{
-        width: 30%;
+
+    .aboutUs img{
+        margin: 0 10%;
     }
 
     .map{
