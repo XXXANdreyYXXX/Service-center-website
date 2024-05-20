@@ -1,195 +1,91 @@
-html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-family: 'Rubik', 'Arial', 'Calibri';
+/* Меню */
+.nav-link {
+    color: white !important;
 }
 
-/* Шапка сайта */
-header {
-    width: 100%;
-    background-color: #0A87CF;
-    border-bottom: 1px solid rgb(11, 135, 207);
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
+.nav-link:hover{
+    color:#cadfff !important;
 }
 
-
-#logo{
-    margin-right: 40px;
-}
-
-#logo img{
-    transition: all .5s;
-}
-
-#logo img:hover{
-    height: 85px;
-}
-
-#menu{
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-.li1{
-    background-color: #0A87CF;
-    width: max-content;
-    padding-right: 30px;
-    height: 80px;
-    align-items: center;
-    display: flex;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-.li2{
-    background-color: #0A87CF;
-    width: 280px;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-.li3{
-    background-color: #0A87CF;
-    width: 200px;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-#menu a{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
     text-decoration: none;
-    display: block;
-    padding-left: 10px;
-    text-align: justify;
-    height: 40px;
-    line-height: 40px;
-    transition: all .5s;
 }
 
-#entrance{
-    display: flex;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
-    display: block;
-    text-align: justify;
-    transition: 0.5s;
-    padding-left: 10px;
-}
-
-#entrance a{
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
-    transition: 0.5s;
-}
-
-#entrance a{
-    padding: 0;
-}
-
-#menu a:hover, #entrance a:hover{
-    font-size: 23px;
-}
-
-#menu ul{
-    position: absolute;
-    left: 0;
-    top: 100%;
-    display: none;
-    padding: 0;
-    z-index: 2;
-}
-
-#menu li:hover ul{
-    display: block;
-}
-
-/* Тело сайта и подвал*/
-section{
-    margin-top: 120px;
-    height: max-content;
-    padding: 0 10%;
-}
-
-.butt:hover{
-    cursor: pointer;
-}
-
-#shape .butt{
-    font-size: 18px;
-    background: #0A87CF;
-    border: 3px solid #0A87CF;
-    color:#FFFFFF;
-    width: 140px;
-    padding: 0px 10px;
-    border-radius: 15px;
-}
-
-.crumbs a{
-    text-decoration: none;
-    color: #acacac;
-}
-
-.crumbs a:hover{
+.interpreter:hover{
     text-decoration: underline;
 }
 
-.crumbs{
-    margin-bottom: 30px;
-    font-style: normal;
+.nav-link, .dropdown-menu, .dropdown-item{
     font-weight: 500;
     font-size: 18px;
-    color: #acacac;
 }
 
-.Heading{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 44px;
-    color: #0883C9;
-    text-align: center;
-    margin-top: 20px;
+.menu{
+    background-color: #0d6efd;
+}
+
+.navbar-brand img{
+    height: 80% !important;
+    width: 80% !important;
+}
+
+
+/* Тело сайта */
+
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+}
+
+.interpreter:hover{
+    text-decoration: underline;
 }
 
 .contacts{
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    margin: 40px 0;
 }
 
-.contacts p{
-    font-style: normal;
-    font-weight: 500;
+.text, .heading{
+    text-align: justify;
+}
+
+.text{
     font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 30px;
 }
 
+.orderCall{
+    display: flex;
+    justify-content: center;
+}
+
+.orderCall button{
+    margin: 16px 0;
+    padding: 1rem 5rem;
+}
+
+#errName, #errPhone{
+    color:red;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+/* Подвал */
 footer{
+    margin-top: 16px;
+    padding: 16px 0;
     background-color: #F9F9F9;
+}
+
+footer .container{
     display: flex;
     justify-content: space-between;
-    padding: 1% 10%;
+}
+
+#address{
+    margin-top: 0;
 }
 
 footer p{
@@ -199,7 +95,7 @@ footer p{
     margin: 10px 0;
 }
 
-footer a, .contacts a{
+.link{
     color: black;
 }
 
@@ -211,120 +107,153 @@ svg{
     text-decoration: none;
 }
 
-#address{
-    margin-top: 0;
-}
-
-#shape{
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 8px solid #0A87CF;
-    border-radius: 100px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 30px;
-    width: 800px;
-}
-
-#shape p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    width: 60%;
-    margin: 30px 0;
-}
-
-#shape > div {
-    align-items: center;
-    display: flex;
-}
-
-#shape div{
-    width: max-content;
-    display: flex;
-    align-items: center;
-}
-
-#shape > div > div{
-    flex-direction: column;
-}
-
-.textInput{
-    font-size: 18px;
-    height: 50px;
-    width: 260px;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 3px solid #0A87CF;
-    border-radius: 30px;
-    padding-left: 20px;
-}
-
-#alignmentShape{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-#errName, #errPhone{
-    display: block;
-    font-size: 12px;
-    color:red;
-    margin-bottom: 10px;
-    height: 2em;
-    width: 240px;
-}
-
-/* Интерактивная карта */
-.title{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 44px;
-    text-align: center;
-    margin: 0;
-}
-.tooltip {
-    position: absolute;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
-    z-index: 20;
-}
-.map{
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    text-align: center;
-    height: 600px;
-    width: 900px;
-}
-.mapSvg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-.area {
-    opacity: 0;
-    transition: fill 0.3s;
-}
-.area:hover{
-    opacity: 0.2;
-    fill: red;
-}
-#petrSer:hover{
-    opacity: 0.2;
-    fill: blue;
-}
-
 .network > svg{
     transition: all 0.8s ease 0s;
 }
 .network > svg:hover{
     transform: scale(1.2);
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-dialog-centered .modal-body{
+    align-items: center;
+}
+
+.contacts a{
+    color:black;
+}
+
+@media (min-width: 993px){
+    section{
+        padding-top: 116px;
+    }
+}
+
+@media (min-width: 992px){
+    .menu{
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .map{
+        height: 500px;
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 992px){
+
+    header{
+        margin-bottom: 16px;
+    }
+
+    .interpreter{
+        margin-top: 16px;
+    }
+
+    .dropdown-item{
+        color: white !important;
+    }
+    .dropdown-menu{
+        background-color: #0d6efd !important;
+        border: none !important;
+    }
+    .menu{
+        position: relative;
+    }
+
+    .headingImg{
+        width: 50%;
+    }
+    .iphoneImg{
+        width: 30%;
+    }
+
+    .map{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .contacts{
+        flex-direction: column;
+    }
+
+    .contacts .map{
+        margin-top: 16px;
+    }
+
+    .col-md-4{
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal-body{
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal-dialog .modal-body{
+        flex-direction: column;
+    }
+
+    .textSlide{
+        display: none;
+    }
+
+    h5{
+        display: block !important;
+    }
+
+
+    form{
+        width: 100%;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .map{
+        margin-bottom: 16px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+
+    .modal-dialog-centered .modal-body img{
+        width: 90%;
+    }
+
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px){
+
+    .btn{
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1000px){
+    .modal-dialog-centered .modal-body img{
+        width: 100%;
+    }
 }

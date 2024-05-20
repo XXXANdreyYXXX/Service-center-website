@@ -42,20 +42,18 @@
     text-decoration: underline;
 }
 
-.contacts{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.contacts
-
-.text, .heading{
+.aboutUs p{
     text-align: justify;
 }
 
-.text{
-    font-size: 18px;
+.textAboutUs{
+    text-align: justify;
+}
+
+
+.heading{
+    margin: 16px 0;
+    text-align: center;
 }
 
 .orderCall{
@@ -68,15 +66,13 @@
     padding: 1rem 5rem;
 }
 
-.window .modal-content{
-    background-color: rgba(255, 255, 255) !important;
-}
-
 #errName, #errPhone{
     color:red;
     font-size: 12px;
     margin-bottom: 16px;
 }
+
+
 
 /* Подвал */
 footer{
@@ -140,23 +136,24 @@ iframe{
 }
 
 @media (min-width: 992px){
+
     .menu{
         width: 100%;
         position: fixed;
         z-index: 10;
     }
 
-    .map{
-        height: 500px;
-        width: 500px;
+    section{
+        padding-top: 116px;
     }
 
-    .headingImg{
-        width: 90%;
+    .aboutUs{
+        display: flex;
+        justify-content: space-between;
     }
 
-    .iphoneImg{
-        width: 40%;
+    .aboutUs div{
+        width: 50%;
     }
 
     .map{

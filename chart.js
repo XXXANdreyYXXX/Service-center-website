@@ -12,6 +12,7 @@ var repairData = {
         label: "Отремонтированной техники (в %)",
         backgroundColor: "#198754",
         borderColor: "#198754",
+        hoverBackgroundColor: "#13653F",
         data: [95, 96, 99, 97, 95, 98] // Данные по принесенной технике
     }]
 };
