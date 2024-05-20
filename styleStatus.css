@@ -11,15 +11,6 @@ html, body{
     color:#cadfff !important;
 }
 
-.interpreter, .breadcrumbs {
-    color: rgb(127, 127, 127);
-    text-decoration: none;
-}
-
-.interpreter:hover{
-    text-decoration: underline;
-}
-
 .nav-link, .dropdown-menu, .dropdown-item{
     font-weight: 500;
     font-size: 18px;
@@ -34,7 +25,21 @@ html, body{
     border-color: rgba(255, 255, 255, 0.55) !important;
 }
 
+.navbar-brand img{
+    height: 80% !important;
+    width: 80% !important;
+}
+
 /* Тело */
+
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+}
+
+.interpreter:hover{
+    text-decoration: underline;
+}
 
 .formDiv{
     display: flex;

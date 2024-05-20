@@ -70,7 +70,7 @@ function Call() {
 
         // Изменяем содержимое модального окна
         const modalBody = document.querySelector('.modal-body');
-        modalBody.innerHTML = '<p>Мы перезвоним вам в течение 1-15 минут.</p>';
+        modalBody.innerHTML = '<p>Мы перезвоним вам в течение 10-15 минут.</p>';
 
         // Скрываем кнопку "Заказать звонок"
         const callButton = document.getElementById('order');

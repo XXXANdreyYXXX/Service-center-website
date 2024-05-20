@@ -7,6 +7,15 @@
     color:#cadfff !important;
 }
 
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+}
+
+.interpreter:hover{
+    text-decoration: underline;
+}
+
 .nav-link, .dropdown-menu, .dropdown-item{
     font-weight: 500;
     font-size: 18px;
@@ -23,21 +32,23 @@
 
 
 /* Тело сайта */
-.heading{
+
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+}
+
+.interpreter:hover{
+    text-decoration: underline;
+}
+
+.contacts{
     display: flex;
-    align-items: center;
-    margin: 16px 0;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.headingRight{
-    margin-left: 16px;
-    margin-bottom: 0;
-}
-
-.headingLeft{
-    margin-right: 16px;
-    margin-bottom: 0;
-}
+.contacts
 
 .text, .heading{
     text-align: justify;
@@ -45,16 +56,6 @@
 
 .text{
     font-size: 18px;
-}
-
-.HeadingText{
-    margin: 16px 0;
-    text-align: center;
-}
-
-.modal-content{
-    background-color: rgba(255, 255, 255, 0) !important;
-    border: none !important;
 }
 
 .orderCall{
@@ -112,7 +113,6 @@ svg{
     text-decoration: none;
 }
 
-
 .network > svg{
     transition: all 0.8s ease 0s;
 }
@@ -127,6 +127,16 @@ iframe{
 
 .modal-dialog-centered .modal-body{
     align-items: center;
+}
+
+.contacts a{
+    color:black;
+}
+
+@media (min-width: 993px){
+    section{
+        padding-top: 116px;
+    }
 }
 
 @media (min-width: 992px){
@@ -158,6 +168,14 @@ iframe{
 
 @media (max-width: 992px){
 
+    header{
+        margin-bottom: 16px;
+    }
+
+    .interpreter{
+        margin-top: 16px;
+    }
+
     .dropdown-item{
         color: white !important;
     }
@@ -183,24 +201,13 @@ iframe{
 }
 
 @media (max-width: 768px){
-    .heading{
+
+    .contacts{
         flex-direction: column;
     }
 
-    .headingImg{
-        width: 70%;
-    }
-
-    .head2{
-        flex-direction: column-reverse;
-    }
-    
-    .headingImg{
-        margin: 16px 0;
-    }
-
-    .img-fluid{
-        width: 70%;
+    .contacts .map{
+        margin-top: 16px;
     }
 
     .col-md-4{

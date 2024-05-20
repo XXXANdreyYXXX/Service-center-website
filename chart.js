@@ -30,7 +30,7 @@ var repairChart = new Chart(repairCanvas, {
                     color: 'black', // Цвет меток
                     font: {
                         size: 18, // Размер шрифта
-                        family: 'Rubik' // Семейство шрифта
+                        family: "Roboto" // Семейство шрифта
                     }
                 }
             },
