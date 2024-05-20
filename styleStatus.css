@@ -158,9 +158,6 @@ iframe{
     .section{
         padding-top: 0;
     }
-}
-
-@media (max-width: 992px){
 
     .map{
         height: 300px;
