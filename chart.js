@@ -1,20 +1,17 @@
 // Получение контекста рисования для элемента canvas с идентификатором "repairChart"
 var repairCanvas = document.getElementById("repairChart").getContext("2d");
 
+//В зависимости от размера экрана, ставим размер шрифта
 var size =  window.innerWidth < 316 ? 5 : window.innerWidth < 355 ? 10 : window.innerWidth < 530 ? 12 : 16;
-
-alert(size);
-
-alert(window.innerWidth);
 
 // Данные для графика
 var repairData = {
     // Метки для оси X
     labels: ["Компьютеры", "Компьютерная техника", "Телефоны", "Планшеты", "Телевизоры", "Остальная техника"],
     datasets: [{
-        label: "Принесли техники",
-        backgroundColor: "rgba(0, 99, 132, 0.6)",
-        borderColor: "rgba(0, 99, 132, 1)",
+        label: "Принесли техники (в %)",
+        backgroundColor: "#198754",
+        borderColor: "#198754",
         data: [95, 96, 99, 97, 95, 98] // Данные по принесенной технике
     }]
 };
