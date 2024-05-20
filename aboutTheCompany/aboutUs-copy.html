@@ -105,7 +105,7 @@
         <div class="staff">
 
             <div class="row">
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <div class="card">
                         <img src="../img/u145.png" class="card-img-top" alt="Первый персонал">
                         <div class="card-body">
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <div class="card">
                         <img src="../img/u144.png" class="card-img-top" alt="Первый персонал">
                         <div class="card-body">
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <div class="card">
                         <img src="../img/u146.png" class="card-img-top" alt="Первый персонал">
                         <div class="card-body">
@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <!-- Дополнительные карточки -->
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <div class="card">
                         <img src="../img/u147.png" class="card-img-top" alt="Первый персонал">
                         <div class="card-body">
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <div class="card">
                         <img src="../img/u148.png" class="card-img-top" alt="Первый персонал">
                         <div class="card-body">
@@ -156,12 +156,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="card">
+                        <img src="../img/dmitryi.jpg" class="card-img-top" alt="Первый персонал">
+                        <div class="card-body">
+                            <h5>Захаров Дмитрий</h5>
+                            <p class="textName">Мастер</p>
+                            <p>5 лет опыта работы</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="card">
+                        <img src="../img/Danil.jpg" class="card-img-top" alt="Первый персонал">
+                        <div class="card-body">
+                            <h5>Кастоцкий Данил</h5>
+                            <p class="textName">Мастер</p>
+                            <p>5 лет опыта работы</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <div class="card">
                         <img src="../img/u149.png" class="card-img-top" alt="Первый персонал">
                         <div class="card-body">
                             <h5>Кучмезов Олег</h5>
                             <p class="textName">Стажёр</p>
+                            <p>2 года опыта работы</p>
                         </div>
                     </div>
                 </div>
@@ -169,8 +190,8 @@
 
         </div>
         
+        <h1 class="heading">Наши портнёры</h1>
 
-        <p class="Heading">НАШИ ПАРТНЕРЫ</p>
         <p class="textAboutUs">Мы гордимся нашими партнерскими отношениями с ведущими мировыми брендами в 
             сфере электроники. Наша компания тесно сотрудничает с такими индустриальными гигантами, как Apple, 
             Samsung, Microsoft, LG и Sony. Эти компании являются символами инновации, качества и надежности в мире 
@@ -184,21 +205,36 @@
         
         <!-- <img src="../img/partners.png" id="partners" alt="Тут должна быть картинка"> -->
 
-        <div id="alignmentShape">
-            <form id="shape">
-                <p >ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ЗВОНОК И ПОЛУЧИТЕ ОТВЕТЫ ПРЯМО СЕЙЧАС!</p>
-                <div>
-                    <div>
-                        <input type="text" id="name" class="textInput" placeholder="Имя" class = 'textField'>
-                        <label for="" id="errName"></label><br>
-                        <input type="text" id="phone" class="textInput" placeholder="+77777777777" maxlength="12" class = 'textField'>
-                        <label for="" id="errPhone"></label><br>
-                        <input type="button" class="butt" onclick="Call()" value="Заказать звонок" style="width: 260px; height: 50px;">
+        <div class="orderCall">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Заказать звонок
+            </button>
+        </div>
 
-                    </div>
-                    <img src="../img/forma.png" width="400px" alt="Тут должна быть картинка">
+        <!-- Modal -->
+        <div class="modal fade window" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Заказать звонок</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </form>
+                <div class="modal-body">
+                    <label for="">В течение 10-15 минут мы вам перезвоним.</label><br>
+                    <label for="">Ваше имя</label>
+                    <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" class = 'textField'>
+                    <label for="" id="errName"></label><br>
+                    <label for="">Ваш номер телефона</label>
+                    <input type="text" id="phone" class="form-control" placeholder="+77777777777" maxlength="12" class = 'textField'>
+                    <label for="" id="errPhone"></label><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" data-bs-target="#exampleModal" id="order" onclick="Call()">Заказать звонок</button>
+                </div>
+            </div>
+            </div>
         </div>
 
     </section>
