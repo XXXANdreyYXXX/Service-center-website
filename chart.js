@@ -1,20 +1,21 @@
 // Получение контекста рисования для элемента canvas с идентификатором "repairChart"
 var repairCanvas = document.getElementById("repairChart").getContext("2d");
 
+var size =  window.innerWidth < 316 ? 5 : window.innerWidth < 355 ? 10 : window.innerWidth < 530 ? 12 : 16;
+
+alert(size);
+
+alert(window.innerWidth);
+
 // Данные для графика
 var repairData = {
     // Метки для оси X
-    labels: ["Ноутбуки", "Компьютеры", "Моноблоки", "Телефоны", "Планшеты", "Телевизоры", "Мониторы", "Принтеры", "Сканеры", "Остальная техника"],
+    labels: ["Компьютеры", "Компьютерная техника", "Телефоны", "Планшеты", "Телевизоры", "Остальная техника"],
     datasets: [{
         label: "Принесли техники",
         backgroundColor: "rgba(0, 99, 132, 0.6)",
         borderColor: "rgba(0, 99, 132, 1)",
-        data: [1001, 12560, 1011, 20000, 10000, 1994, 999, 504, 152, 1502] // Данные по принесенной технике
-    }, {
-        label: "Отремонтировали техники",
-        backgroundColor: "rgba(99, 132, 0, 0.6)",
-        borderColor: "rgba(99, 132, 0, 1)",
-        data: [956, 12101, 999, 19742, 9910, 1902, 920, 495, 150, 1500] // Данные по отремонтированной технике
+        data: [95, 96, 99, 97, 95, 98] // Данные по принесенной технике
     }]
 };
 
@@ -29,8 +30,8 @@ var repairChart = new Chart(repairCanvas, {
                 ticks: {
                     color: 'black', // Цвет меток
                     font: {
-                        size: 18, // Размер шрифта
-                        family: "Roboto" // Семейство шрифта
+                        size: size, // Размер шрифта
+                        family: "Rubik" // Семейство шрифта
                     }
                 }
             },
@@ -39,7 +40,7 @@ var repairChart = new Chart(repairCanvas, {
                 ticks: {
                     color: 'black', // Цвет меток
                     font: {
-                        size: 18, // Размер шрифта
+                        size: size, // Размер шрифта
                         family: 'Rubik' // Семейство шрифта
                     }
                 }
@@ -51,11 +52,11 @@ var repairChart = new Chart(repairCanvas, {
                 titleColor: 'white', // Цвет заголовка
                 bodyColor: 'white', // Цвет текста
                 bodyFont: {
-                    size: 18, // Размер текста
+                    size: size, // Размер текста
                     family: 'Rubik' // Семейство шрифта
                 },
                 titleFont: {
-                    size: 18, // Размер заголовка
+                    size: size, // Размер заголовка
                     family: 'Rubik' // Семейство шрифта
                 },
                 displayColors: false, // Отображение цветных квадратиков
@@ -64,7 +65,7 @@ var repairChart = new Chart(repairCanvas, {
                 // Настройки легенды
                 labels: {
                     font: {
-                        size: 18, // Размер текста
+                        size: size, // Размер текста
                         family: 'Rubik' // Семейство шрифта
                     },
                     color: 'black' // Цвет текста
@@ -73,15 +74,5 @@ var repairChart = new Chart(repairCanvas, {
         },
         indexAxis: 'y', // Ось индексов (по оси Y)
         barPercentage: 1.0, // Процент ширины столбцов
-        // animations: {
-        //     borderWidth: {
-        //         // Анимация ширины границы
-        //         duration: 1000, // Длительность анимации
-        //         easing: 'lianer', // Тип анимации
-        //         to: 0, // Конечное значение
-        //         from: 5, // Начальное значение
-        //         loop: true, // Повторение анимации
-        //     }
-        // }
     }
 });

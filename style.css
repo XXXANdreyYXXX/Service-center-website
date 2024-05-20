@@ -262,6 +262,12 @@ iframe{
         width: 100%;
     }
 
+    /* canvas{
+        height: 700px !important;
+        width: 900px !important;
+        font-size: 1px !important;
+    } */
+
 }
 
 @media (min-width: 1000px){
