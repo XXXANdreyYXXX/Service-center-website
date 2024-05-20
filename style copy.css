@@ -37,22 +37,125 @@ html, body{
     width: 80% !important;
 }
 
+.heading{
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.headingRight{
+    margin-left: 16px;
+    margin-bottom: 0;
+}
+
+.headingLeft{
+    margin-right: 16px;
+    margin-bottom: 0;
+}
+
+.text, .heading{
+    text-align: justify;
+}
+
+.text{
+    font-size: 18px;
+}
+
+.HeadingText{
+    margin: 16px 0;
+    text-align: center;
+}
+
+.modal-content{
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: none !important;
+}
+
+.orderCar{
+    display: flex;
+    justify-content: center;
+}
+
+.orderCar button{
+    margin: 16px 0;
+    padding: 1rem 5rem;
+}
+
+.window .modal-content{
+    background-color: rgba(255, 255, 255) !important;
+}
+
+#errName, #errPhone{
+    color:red;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+/* Подвал */
+footer{
+    margin-top: 16px;
+    padding: 16px 0;
+    background-color: #F9F9F9;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#address{
+    margin-top: 0;
+}
+
+footer p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.link{
+    color: black;
+}
+
+svg{
+    margin-right: 15px;
+}
+
+.network{
+    text-decoration: none;
+}
+
+
+.network > svg{
+    transition: all 0.8s ease 0s;
+}
+.network > svg:hover{
+    transform: scale(1.2);
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
 
 @media (min-width: 992px){
     .menu{
         width: 100%;
         position: fixed;
-        z-index: 1;
-    }
-
-    section{
-        padding-top: 85px;
+        z-index: 10;
     }
 
     .map{
         height: 500px;
         width: 500px;
     }
+
+    .heading img{
+        width: 90%;
+    }
+
 }
 
 

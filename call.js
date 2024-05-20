@@ -68,8 +68,12 @@ function Call() {
             phone: phoneReg
         };
 
-        document.getElementById("name").value = "";
-        document.getElementById("phone").value = "+7";
-        location.reload();
+        // Изменяем содержимое модального окна
+        const modalBody = document.querySelector('.modal-body');
+        modalBody.innerHTML = '<p>Мы перезвоним вам в течение 1-15 минут.</p>';
+
+        // Скрываем кнопку "Заказать звонок"
+        const callButton = document.getElementById('order');
+        callButton.style.display = 'none';
     }
 }
