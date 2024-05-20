@@ -9,7 +9,7 @@ var repairData = {
     // Метки для оси X
     labels: ["Компьютеры", "Компьютерная техника", "Телефоны", "Планшеты", "Телевизоры", "Остальная техника"],
     datasets: [{
-        label: "Принесли техники (в %)",
+        label: "Отремонтированной техники (в %)",
         backgroundColor: "#198754",
         borderColor: "#198754",
         data: [95, 96, 99, 97, 95, 98] // Данные по принесенной технике
@@ -59,14 +59,15 @@ var repairChart = new Chart(repairCanvas, {
                 displayColors: false, // Отображение цветных квадратиков
             },
             legend: {
+                display: false
                 // Настройки легенды
-                labels: {
-                    font: {
-                        size: size, // Размер текста
-                        family: 'Rubik' // Семейство шрифта
-                    },
-                    color: 'black' // Цвет текста
-                }
+                // labels: {
+                //     font: {
+                //         size: size, // Размер текста
+                //         family: 'Rubik' // Семейство шрифта
+                //     },
+                //     color: 'black' // Цвет текста
+                // }
             }
         },
         indexAxis: 'y', // Ось индексов (по оси Y)
