@@ -63,6 +63,20 @@
     margin-bottom: 16px;
 }
 
+.partners{
+    margin: 16px 0;
+}
+
+.partners img{
+    width: 100%;
+}
+
+.aboutUs{
+    border: 1px solid black !important;
+}
+
+
+
 .orderCall{
     display: flex;
     justify-content: center;
