@@ -32,7 +32,6 @@
 
 
 /* Тело сайта */
-
 .interpreter, .breadcrumbs {
     color: rgb(127, 127, 127);
     text-decoration: none;
@@ -47,12 +46,13 @@
     text-align: center;
 }
 
-p{
+p, li{
     text-align: justify;
 }
 
 section li{
     list-style-image: url("../img/marker.svg");
+    align-items: center;
 }
 
 section ul{

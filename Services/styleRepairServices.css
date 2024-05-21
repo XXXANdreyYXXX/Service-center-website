@@ -1,304 +1,107 @@
-html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-family: 'Rubik', 'Arial', 'Calibri';
+/* Меню */
+.nav-link {
+    color: white !important;
 }
 
-/* Шапка сайта */
-header {
-    width: 100%;
-    background-color: #0A87CF;
-    border-bottom: 1px solid rgb(11, 135, 207);
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
+.nav-link:hover{
+    color:#cadfff !important;
 }
 
-
-#logo{
-    margin-right: 40px;
-}
-
-#logo img{
-    transition: all .5s;
-}
-
-#logo img:hover{
-    height: 85px;
-}
-
-#menu{
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-.li1{
-    background-color: #0A87CF;
-    width: max-content;
-    padding-right: 30px;
-    height: 80px;
-    align-items: center;
-    display: flex;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-.li2{
-    background-color: #0A87CF;
-    width: 280px;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-.li3{
-    background-color: #0A87CF;
-    width: 200px;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-#menu a{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
     text-decoration: none;
-    display: block;
-    padding-left: 10px;
-    text-align: justify;
-    height: 40px;
-    line-height: 40px;
-    transition: all .5s;
 }
 
-#entrance{
-    display: flex;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
-    display: block;
-    text-align: justify;
-    transition: 0.5s;
-    padding-left: 10px;
-}
-
-#entrance a{
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
-    transition: 0.5s;
-}
-
-#entrance a{
-    padding: 0;
-}
-
-#menu a:hover, #entrance a:hover{
-    font-size: 23px;
-}
-
-#menu ul{
-    position: absolute;
-    left: 0;
-    top: 100%;
-    display: none;
-    padding: 0;
-    z-index: 2;
-}
-
-#menu li:hover ul{
-    display: block;
-}
-
-/* Тело сайта и подвал*/
-section{
-    margin-top: 120px;
-    height: max-content;
-    padding: 0 10%;
-}
-
-#crumbs a{
-    text-decoration: none;
-    color: #acacac;
-}
-
-#crumbs a:hover{
+.interpreter:hover{
     text-decoration: underline;
 }
 
-#carouselExampleIndicators{
-    margin: 30px 0;
-}
-
-#crumbs{
-    font-style: normal;
+.nav-link, .dropdown-menu, .dropdown-item{
     font-weight: 500;
     font-size: 18px;
-    color: #acacac;
 }
 
-.Heading{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 44px;
-    color: #0883C9;
-    text-align: center;
-    margin-top: 20px;
+.menu{
+    background-color: #0d6efd;
 }
 
-.textAboutUs{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
+.navbar-brand img{
+    height: 80% !important;
+    width: 80% !important;
+}
+
+
+/* Тело сайта */
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+}
+
+.interpreter:hover{
+    text-decoration: underline;
+}
+
+.heading, .headingCenter{
+    margin: 16px 0;
+}
+
+.headingCenter{
+    display: flex;
+    justify-content: center;
+}
+
+p{
     text-align: justify;
-    text-indent: 50px;
+}
+
+section li{
+    list-style-image: url("../img/marker.svg");
+}
+
+section ul{
+    padding: 0;
     margin: 0;
-    margin-bottom: 10px;
 }
 
-.headingSlide{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.textSlide{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: justify;
-}
-
-.textAboutUs:last-of-type {
-    margin-bottom: 50px;
-}
-
-#slaider{
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-#partners{
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-button:hover{
-    cursor: pointer;
-}
-
-.headStaff{
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.staff-row {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.worker {
-    background-color: #F9F9F9; /* Just for visualization */
-    border: 1px solid rgb(202, 201, 201);
-    width: 180px;
-    display: flex;
-    flex-direction: column;
-}
-
-.worker > img {
-    width: 150px; /* To ensure the image takes up the full width of its container */
-    margin: 10px 0 10px 8%;
-
-}
-
-.worker p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: justify;
-    margin: 0 0 10px 8%;
-}
-
-.staff{
-    margin: 0 10%;
-}
-
-.list{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: justify;
-    margin: 0 0 10px 0;
-    padding-left: 75px;
-}
-
-.list li{
-    list-style-image: url('../img/marker.svg');
-    /* margin-left: 10px; */
-    list-style-position: outside;
+section ol, ul {
+    padding-left: 1.5rem !important;
 }
 
 table{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    width: 80%;
-    border-collapse: collapse;
-    border: 3px solid #f2f2f2;
-    border-width: 3px;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
-    border-style: solid;
-    border-width: 3px !important;
-    border-color: #f2f2f2;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-.testList{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: justify;
-    text-indent: 50px;
     margin: 0;
 }
 
-.divTable{
+#errName, #errPhone{
+    color:red;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.orderCall{
     display: flex;
     justify-content: center;
+}
+
+.orderCall button{
+    margin: 16px 0;
+    padding: 1rem 5rem;
 }
 
 
 /* Подвал */
 footer{
+    margin-top: 16px;
+    padding: 16px 0;
     background-color: #F9F9F9;
+}
+
+footer .container{
     display: flex;
     justify-content: space-between;
-    padding: 1% 10%;
+}
+
+#address{
+    margin-top: 0;
 }
 
 footer p{
@@ -308,7 +111,7 @@ footer p{
     margin: 10px 0;
 }
 
-footer a, .contacts a{
+.link{
     color: black;
 }
 
@@ -320,88 +123,86 @@ svg{
     text-decoration: none;
 }
 
-#address{
-    margin-top: 0;
-}
-
-#shape{
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 8px solid #0A87CF;
-    border-radius: 100px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 30px;
-    width: 800px;
-}
-
-#shape p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    width: 60%;
-    margin: 30px 0;
-}
-
-#shape > div {
-    align-items: center;
-    display: flex;
-}
-
-#shape div{
-    width: max-content;
-    display: flex;
-    align-items: center;
-}
-
-#shape > div > div{
-    flex-direction: column;
-}
-
-.textInput{
-    font-size: 18px;
-    height: 50px;
-    width: 260px;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 3px solid #0A87CF;
-    border-radius: 30px;
-    padding-left: 20px;
-}
-
-#errName, #errPhone{
-    display: block;
-    font-size: 12px;
-    color:red;
-    margin-bottom: 10px;
-    height: 2em;
-    width: 240px;
-}
-
-#shape .butt{
-    font-size: 18px;
-    background: #0A87CF;
-    border: 3px solid #0A87CF;
-    color:#FFFFFF;
-    width: 140px;
-    padding: 0px 10px;
-    border-radius: 15px;
-}
-
-#alignmentShape{
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
 .network > svg{
     transition: all 0.8s ease 0s;
 }
 .network > svg:hover{
     transform: scale(1.2);
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-dialog-centered .modal-body{
+    align-items: center;
+}
+
+.contacts a{
+    color:black;
+}
+
+@media (min-width: 993px){
+    section{
+        padding-top: 116px;
+    }
+}
+
+@media (min-width: 992px){
+
+    .menu{
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .map{
+        height: 500px;
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 992px){
+
+    header{
+        margin-bottom: 16px;
+    }
+
+    .interpreter{
+        margin-top: 16px;
+    }
+
+    .dropdown-item{
+        color: white !important;
+    }
+    .dropdown-menu{
+        background-color: #0d6efd !important;
+        border: none !important;
+    }
+    .menu{
+        position: relative;
+    }
+
+    .map{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .map{
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    footer .container{
+        flex-direction: column-reverse;
+    }
+
+    .btn{
+        width: 100%;
+    }
 }
