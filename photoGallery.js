@@ -1,16 +1,15 @@
 $(document).ready(function() {
     // Sample array of image URLs
     var images = [
-        "https://falconteh.ru/image/catalog/site/certhp.jpg",
-        "https://loip.ru/upload/iblock/7ad/7ad55ed75d3b47eb9b2805813811689b.jpg",
-        "https://falconteh.ru/image/catalog/site/sertifikatSamsung2.jpg",
-        "https://a-lider.net/wp-content/uploads/2020/12/full_v2gI7Fca.jpg",
-        "https://th.bing.com/th/id/R.f391809d9c22434dd6e03f8043c69cdb?rik=wbZIC0%2fNhkfywA&riu=http%3a%2f%2fwww.sar-service.com%2fwp-content%2fuploads%2f2018%2f06%2fsertifikat_ROLSEN.jpg&ehk=dLgrFACKWaEaRdG%2fH3H38oyuaU6zUhsh9GmQjxRZRyU%3d&risl=&pid=ImgRaw&r=0",
-        "https://revanshsc.ru/upload/medialibrary/59c/xbkzw3vvrft3f7h6vhk0cv6j2i0x9y79.jpg",
-        "https://th.bing.com/th/id/R.daee109426a4452b515c6054fd3e17a0?rik=bDFjOEWoZOt4cQ&riu=http%3a%2f%2fraimet.ru%2fassets%2fimages%2fimage_12.jpg&ehk=8slqzD8TXxb%2frX8w8njDBkDfCdx9rJwi5r%2fNiiKcvRw%3d&risl=&pid=ImgRaw&r=0",
-        "https://th.bing.com/th/id/R.95993198879dccc4153967f4a6547087?rik=OqfkqqYitQW83w&riu=http%3a%2f%2fcsm.omsk.ru%2fwp-content%2fuploads%2fpdf%2ftka.jpg&ehk=Eoh30MWKW62jEGH3NtQSSxpXQXSzu%2faXqurUQKruOW8%3d&risl=&pid=ImgRaw&r=0",
-        "https://www.istok.biz/static/uploaded/images/companyhistory/image/9366981_Sertifikat_SP_Istok-BS_Krasnoyarsk_SSP.jpg"
-        // Add more image URLs as needed
+        "img/certificate1.jpg",
+        "img/certificate2_result.webp",
+        "img/certificate3.jpg",
+        "img/certificate4.jpg",
+        "img/certificate5_result.webp",        
+        "img/certificate7_result.webp",        
+        "img/certificate6_result.webp",        
+        "img/certificate8_result.webp",        
+        "img/certificate9_result.webp"  
     ];
 
     // Populate gallery with images
