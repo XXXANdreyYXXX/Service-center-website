@@ -15,7 +15,7 @@ var labelErrAgreement = document.getElementById("errAgreement");
 function validateName(name) {
     let namePattern = /[0-9]/;
     if (namePattern.test(name) || name.length < 3) {
-        return "Поле 'Имя' не должно содержать цифры и длиной больше 2 символов!";
+        return true;
     }
     return null; // Если имя прошло проверку
 }
@@ -24,7 +24,7 @@ function validateName(name) {
 function validatePhone(phone) {
     let phonePattern = /\+7[0-9]{10}/;
     if (!phonePattern.test(phone) || phone.length < 12 || phone.includes(' ')) {
-        return "Поле 'Телефон' должно соответствовать шаблону: +7XXXXXXXXXX";
+        return true;
     }
     return null; // Если телефон прошел проверку
 }
@@ -34,28 +34,27 @@ function validatePhone(phone) {
 // Функция для валидации соглашения
 function validateAgreement(agreementChecked) {
     if (!agreementChecked) {
-        return "Согласитесь с хранением и обработкой данных";
+        return true;
     }
     return null; // Если соглашение прошло проверку
 }
 
-// Функция для регистрации пользователя
-function Registration() {
+// Функция для заявкии пользователя
+function Request() {
+
     // Очистка меток ошибок перед каждой новой проверкой
-    labelErrAgreement.innerHTML = "";
-    labelErrName.innerHTML = "";
-    labelErrPhone.innerHTML = "";
-    labelErrTechnic.innerHTML = "";
-    labelErrProblem.innerHTML = "";
+    labelErrAgreement.style.opacity = "0";
+    labelErrName.style.opacity = "0";
+    labelErrPhone.style.opacity = "0";
+    labelErrProblem.style.opacity = "0";
+    labelErrTechnic.style.opacity = "0";
 
     // Получение значений из полей формы и удаление лишних пробелов
     let name = document.getElementById("name").value.trim();
-    let phome = document.getElementById("phone").value.trim();
-    let agreement = document.getElementById("agreementLink").checked;
+    let phone = document.getElementById("phone").value.trim();
+    let agreement = document.getElementById("agreement").checked;
     let technic = document.getElementById("technic").value;
     let problem = document.getElementById("problem").value.trim();
-
-    alert(name);
 
     // Преобразование имени, если есть пробелы
     var newname = '';
@@ -72,68 +71,54 @@ function Registration() {
     let errors = 0;
 
     // Валидация имени
-    let nameError = validateName(name);
-    if (nameError) {
-        labelErrName.innerHTML = nameError;
+    if (validateName(name)) {
+        labelErrName.style.opacity = "1";
         errors++;
     }
 
     // Валидация телефона
-    let phoneError = validatePhone(phome);
-    if (phoneError) {
-        labelErrPhone.innerHTML = phoneError;
+    if (validatePhone(phone)) {
+        labelErrPhone.style.opacity = "1";
         errors++;
     }
 
     // Валидация выбора техники
-    if (!technic) {
-        labelErrTechnic.innerHTML = "Выберите технику";
+    if (technic == 0) {
+        labelErrTechnic.style.opacity = "1";
         errors++;
     }
 
     // Валидация описания проблемы
     if (!problem) {
-        labelErrProblem.innerHTML = "Введите описание проблемы";
+        labelErrProblem.style.opacity = "1";
         errors++;
     }
 
     // Валидация соглашения
-    let agreementError = validateAgreement(agreement);
-    if (agreementError) {
-        labelErrAgreement.innerHTML = agreementError;
+    if (validateAgreement(agreement)) {
+        labelErrAgreement.style.opacity = "1";
         errors++;
     }
 
     // Если нет ошибок, сохраняем данные пользователя и очищаем поля формы
     if (errors == 0) {
-        Application = {
-            name: name.charAt(0).toUpperCase() + name.slice(1),
-            phone: phome,
-            technic: technic.options[technic].text,
-            problem: problem
-        };
 
-        document.getElementById("name").value = "";
-        document.getElementById("phone").value = "+7";
-        document.getElementById("technic").value = 0;
-        document.getElementById("problem").value = "";
-        document.getElementById("agreement").checked = false;
+        labelErrAgreement.style.opacity = "0";
+        labelErrName.style.opacity = "0";
+        labelErrPhone.style.opacity = "0";
+        labelErrProblem.style.opacity = "0";
+        labelErrTechnic.style.opacity = "0";
 
-        // Разблокировка кнопки
-        document.getElementById("conclusion").disabled = false;
+
+        $('#exampleModal').modal('show');
+
     }
 }
 
-// Функция для вывода данных пользователя
-function Conclusion() {
-    // Вывод данных пользователя на страницу
-    ApplicationElement = document.getElementById("dataApplication");
-    ApplicationElement.innerHTML += `<p><strong>Имя:</strong> ${Application.name}</p>
-                                <p><strong>Телефон:</strong> ${Application.phone}</p>
-                                <p><strong>Техника:</strong> ${Application.technic}</p>
-                                <p><strong>Проблема:</strong> ${Application.problem}</p>`;
-
-    // Блокировка кнопки после вывода данных
-    var button = document.getElementById("conclusion");
-    button.disabled = true;
+function Сleansing(){
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "+7";
+    document.getElementById("problem").value = "";
+    document.getElementById("agreement").checked = true;
+    document.getElementById("technic").selectedIndex = 0;
 }

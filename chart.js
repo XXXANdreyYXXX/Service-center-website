@@ -62,14 +62,6 @@ var repairChart = new Chart(repairCanvas, {
             },
             legend: {
                 display: false
-                // Настройки легенды
-                // labels: {
-                //     font: {
-                //         size: size, // Размер текста
-                //         family: 'Rubik' // Семейство шрифта
-                //     },
-                //     color: 'black' // Цвет текста
-                // }
             }
         },
         indexAxis: 'y', // Ось индексов (по оси Y)

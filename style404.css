@@ -1,275 +1,69 @@
-html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-family: 'Rubik', 'Arial', 'Calibri';
+/* Меню */
+.nav-link {
+    color: white !important;
 }
 
-/* Шапка сайта */
-header {
-    width: 100%;
-    background-color: #0A87CF;
-    border-bottom: 1px solid rgb(11, 135, 207);
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
+.nav-link:hover{
+    color:#cadfff !important;
 }
 
-
-#logo{
-    margin-right: 40px;
-}
-
-#logo img{
-    transition: all .5s;
-}
-
-#logo img:hover{
-    height: 85px;
-}
-
-#menu{
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-.li1{
-    background-color: #0A87CF;
-    width: max-content;
-    padding-right: 30px;
-    height: 80px;
-    align-items: center;
-    display: flex;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-.li2{
-    background-color: #0A87CF;
-    width: 280px;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-.li3{
-    background-color: #0A87CF;
-    width: 200px;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    z-index: 2;
-}
-
-#menu a{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
+.interpreter, .breadcrumbs {
+    color: rgb(127, 127, 127);
     text-decoration: none;
-    display: block;
-    padding-left: 10px;
-    text-align: justify;
-    height: 40px;
-    line-height: 40px;
-    transition: all .5s;
 }
 
-#entrance{
-    display: flex;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
-    display: block;
-    text-align: justify;
-    transition: 0.5s;
-    padding-left: 10px;
+.interpreter:hover{
+    text-decoration: underline;
 }
 
-#entrance a{
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fcfcfc;
-    transition: 0.5s;
-}
-
-#entrance a{
-    padding: 0;
-}
-
-#menu a:hover, #entrance a:hover{
-    font-size: 23px;
-}
-
-#menu ul{
-    position: absolute;
-    left: 0;
-    top: 100%;
-    display: none;
-    padding: 0;
-    z-index: 2;
-}
-
-#menu li:hover ul{
-    display: block;
-}
-
-/* Тело сайта и подвал*/
-section{
-    margin-top: 120px;
-    height: max-content;
-    padding: 0 10%;
-}
-
-section a{
-    color:black;
-}
-
-#error404{
-    font-style: normal;
-    font-weight: 800;
-    font-size: 280px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-#error404-text {
-    animation: shadowAnimation 2s linear infinite alternate-reverse;
-}
-
-@keyframes shadowAnimation {
-    0% {
-        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); /* Начальная тень */
-    }
-    100% {
-        text-shadow: 10px 10px 10px rgba(0, 0, 0, 1); /* Конечная тень */
-    }
-}
-
-.textError{
-    font-style: normal;
+.nav-link, .dropdown-menu, .dropdown-item{
     font-weight: 500;
     font-size: 18px;
-    text-align: justify;
-    text-indent: 50px;
-    margin-bottom: 10px;
 }
 
-#divButton{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.menu{
+    background-color: #0d6efd;
 }
 
-button:hover{
-    cursor: pointer;
+.navbar-brand img{
+    height: 80% !important;
+    width: 80% !important;
 }
 
-#buttonError{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    background: #0A87CF;
-    border: 3px solid #0A87CF;
-    color:#FFFFFF;
-    width: 160px;
-    padding: 0px 10px;
-    border-radius: 15px;
-}
 
-#shape{
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 8px solid #0A87CF;
-    border-radius: 100px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 30px;
-    width: 800px;
-}
-
-#shape p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
+/* Тело сайта */
+.err{
     text-align: center;
-    width: 60%;
-    margin: 30px 0;
+    font-size: 120px;
 }
 
-#shape > div {
-    align-items: center;
-    display: flex;
+a{
+    color: black !important;
 }
 
-#shape div{
-    width: max-content;
-    display: flex;
-    align-items: center;
+p{
+    text-align: justify;
 }
 
-#shape > div > div{
-    flex-direction: column;
-}
-
-.textInput{
-    font-size: 18px;
-    height: 50px;
-    width: 260px;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 3px solid #0A87CF;
-    border-radius: 30px;
-    padding-left: 20px;
-}
-
-#shape .butt{
-    font-size: 18px;
-    background: #0A87CF;
-    border: 3px solid #0A87CF;
-    color:#FFFFFF;
-    width: 140px;
-    padding: 0px 10px;
-    border-radius: 15px;
-}
-
-#alignmentShape{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-#errName, #errPhone{
-    display: block;
-    font-size: 12px;
-    color:red;
-    margin-bottom: 10px;
-    height: 2em;
-    width: 240px;
+#divButton button{
+    margin: 16px 0;
+    padding: 1rem 5rem;
 }
 
 /* Подвал */
 footer{
+    margin-top: 16px;
+    padding: 16px 0;
     background-color: #F9F9F9;
+}
+
+footer .container{
     display: flex;
     justify-content: space-between;
-    padding: 1% 10%;
+}
+
+#address{
+    margin-top: 0;
 }
 
 footer p{
@@ -279,7 +73,7 @@ footer p{
     margin: 10px 0;
 }
 
-footer a, .contacts a{
+.link{
     color: black;
 }
 
@@ -291,13 +85,109 @@ svg{
     text-decoration: none;
 }
 
-#address{
-    margin-top: 0;
-}
-
 .network > svg{
     transition: all 0.8s ease 0s;
 }
 .network > svg:hover{
     transform: scale(1.2);
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-dialog-centered .modal-body{
+    align-items: center;
+}
+
+.contacts a{
+    color:black;
+}
+
+@media (min-width: 993px){
+    section{
+        padding-top: 116px;
+    }
+}
+
+@media (min-width: 992px){
+    .menu{
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .map{
+        height: 500px;
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 992px){
+
+    header{
+        margin-bottom: 16px;
+    }
+
+    .interpreter{
+        margin-top: 16px;
+    }
+
+    .dropdown-item{
+        color: white !important;
+    }
+    .dropdown-menu{
+        background-color: #0d6efd !important;
+        border: none !important;
+    }
+    .menu{
+        position: relative;
+    }
+
+    .map{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .btn{
+        width: 100%;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .map{
+        margin-bottom: 16px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+
+    #divButton{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .btn{
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1000px){
+    .modal-dialog-centered .modal-body img{
+        width: 100%;
+    }
 }
