@@ -49,54 +49,56 @@ function Registration() {
     labelErrProblem.innerHTML = "";
 
     // Получение значений из полей формы и удаление лишних пробелов
-    let nameReg = document.getElementById("name").value.trim();
-    let phoneReg = document.getElementById("phone").value.trim();
-    let agreementReg = document.getElementById("agreement").checked;
-    let technicReg = document.getElementById("technic").value;
-    let problemReg = document.getElementById("problem").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let phome = document.getElementById("phone").value.trim();
+    let agreement = document.getElementById("agreementLink").checked;
+    let technic = document.getElementById("technic").value;
+    let problem = document.getElementById("problem").value.trim();
+
+    alert(name);
 
     // Преобразование имени, если есть пробелы
-    var newNameReg = '';
-    for (var i = 0; i < nameReg.length; i++) {
-        if (nameReg.charAt(i) === " " && i + 1 < nameReg.length) {
-            newNameReg += nameReg.charAt(i) + nameReg.charAt(i + 1).toUpperCase();
+    var newname = '';
+    for (var i = 0; i < name.length; i++) {
+        if (name.charAt(i) === " " && i + 1 < name.length) {
+            newname += name.charAt(i) + name.charAt(i + 1).toUpperCase();
             i++;
         } else {
-            newNameReg += nameReg.charAt(i);
+            newname += name.charAt(i);
         }
     }
-    nameReg = newNameReg;
+    name = newname;
 
     let errors = 0;
 
     // Валидация имени
-    let nameError = validateName(nameReg);
+    let nameError = validateName(name);
     if (nameError) {
         labelErrName.innerHTML = nameError;
         errors++;
     }
 
     // Валидация телефона
-    let phoneError = validatePhone(phoneReg);
+    let phoneError = validatePhone(phome);
     if (phoneError) {
         labelErrPhone.innerHTML = phoneError;
         errors++;
     }
 
     // Валидация выбора техники
-    if (!technicReg) {
+    if (!technic) {
         labelErrTechnic.innerHTML = "Выберите технику";
         errors++;
     }
 
     // Валидация описания проблемы
-    if (!problemReg) {
+    if (!problem) {
         labelErrProblem.innerHTML = "Введите описание проблемы";
         errors++;
     }
 
     // Валидация соглашения
-    let agreementError = validateAgreement(agreementReg);
+    let agreementError = validateAgreement(agreement);
     if (agreementError) {
         labelErrAgreement.innerHTML = agreementError;
         errors++;
@@ -105,10 +107,10 @@ function Registration() {
     // Если нет ошибок, сохраняем данные пользователя и очищаем поля формы
     if (errors == 0) {
         Application = {
-            name: nameReg.charAt(0).toUpperCase() + nameReg.slice(1),
-            phone: phoneReg,
-            technic: technic.options[technicReg].text,
-            problem: problemReg
+            name: name.charAt(0).toUpperCase() + name.slice(1),
+            phone: phome,
+            technic: technic.options[technic].text,
+            problem: problem
         };
 
         document.getElementById("name").value = "";
