@@ -9,7 +9,7 @@ var labelErrPhone = document.getElementById("errPhone");
 function validateName(name) {
     let namePattern = /[0-9]/;
     if (namePattern.test(name) || name.length < 3) {
-        return "Поле 'Имя' не должно содержать цифры и длиной больше 2 символов!";
+        return true;
     }
     return null; // Если имя прошло проверку
 }
@@ -18,7 +18,7 @@ function validateName(name) {
 function validatePhone(phone) {
     let phonePattern = /\+7[0-9]{10}/;
     if (!phonePattern.test(phone) || phone.length < 12 || phone.includes(' ')) {
-        return "Поле 'Телефон' должно соответствовать шаблону: +7XXXXXXXXXX";
+        return true;
     }
     return null; // Если телефон прошел проверку
 }
@@ -26,46 +26,44 @@ function validatePhone(phone) {
 // Функция для регистрации пользователя
 function Call() {
     // Очистка меток ошибок перед каждой новой проверкой
-    labelErrName.innerHTML = "";
-    labelErrPhone.innerHTML = "";
+    document.getElementById('errName').style.opacity = "0";
+    document.getElementById('errPhone').style.opacity = "0";
 
     // Получение значений из полей формы и удаление лишних пробелов
-    let nameReg = document.getElementById("name").value.trim();
-    let phoneReg = document.getElementById("phone").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
 
     // Преобразование имени, если есть пробелы
-    var newNameReg = '';
-    for (var i = 0; i < nameReg.length; i++) {
-        if (nameReg.charAt(i) === " " && i + 1 < nameReg.length) {
-            newNameReg += nameReg.charAt(i) + nameReg.charAt(i + 1).toUpperCase();
+    var newName = '';
+    for (var i = 0; i < name.length; i++) {
+        if (name.charAt(i) === " " && i + 1 < name.length) {
+            newName += name.charAt(i) + name.charAt(i + 1).toUpperCase();
             i++;
         } else {
-            newNameReg += nameReg.charAt(i);
+            newName += name.charAt(i);
         }
     }
-    nameReg = newNameReg;
+    name = newName;
 
     let errors = 0;
 
     // Валидация имени
-    let nameError = validateName(nameReg);
-    if (nameError) {
-        labelErrName.innerHTML = nameError;
+    if (validateName(name)) {
+        document.getElementById('errName').style.opacity = "1";
         errors++;
     }
 
     // Валидация телефона
-    let phoneError = validatePhone(phoneReg);
-    if (phoneError) {
-        labelErrPhone.innerHTML = phoneError;
+    if (validatePhone(phone)) {
+        document.getElementById('errPhone').style.opacity = "1";
         errors++;
     }
 
     // Если нет ошибок, сохраняем данные пользователя и очищаем поля формы
     if (errors == 0) {
         userData = {
-            name: nameReg.charAt(0).toUpperCase() + nameReg.slice(1),
-            phone: phoneReg
+            name: name.charAt(0).toUpperCase() + name.slice(1),
+            phone: phone
         };
 
         // Изменяем содержимое модального окна

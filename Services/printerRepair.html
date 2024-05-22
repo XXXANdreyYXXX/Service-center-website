@@ -178,13 +178,14 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <label for="">В течение 10-15 минут мы вам перезвоним.</label><br><br>
-                            <label for="">Ваше имя</label>
-                            <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" class = 'textField'>
-                            <label for="" id="errName"></label><br>
-                            <label for="">Ваш номер телефона</label>
-                            <input type="text" id="phone" class="form-control" placeholder="+77777777777" maxlength="12" class = 'textField'>
-                            <label for="" id="errPhone"></label><br>
+                            <form action="">
+                                <label for="">Ваше имя</label>
+                                <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" class = 'textField'>
+                                <p id="errName">Поле 'Имя' не должно содержать цифры и длиной больше 2 символов!</p>
+                                <label for="">Ваш номер телефона</label>
+                                <input type="text" id="phone" class="form-control" placeholder="+77777777777" maxlength="12" class = 'textField'>
+                                <p id="errPhone">Поле 'Телефон' должно соответствовать шаблону: +7XXXXXXXXXX</p>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>

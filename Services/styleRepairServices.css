@@ -73,8 +73,9 @@ table{
 
 #errName, #errPhone{
     color:red;
+    opacity: 0;
     font-size: 12px;
-    margin-bottom: 16px;
+    margin: 0;
 }
 
 .orderCall{

@@ -63,14 +63,6 @@
     margin-bottom: 16px;
 }
 
-.partners{
-    margin: 16px 0;
-}
-
-.partners img{
-    width: 100%;
-}
-
 .orderCall{
     display: flex;
     justify-content: center;
@@ -83,8 +75,9 @@
 
 #errName, #errPhone{
     color:red;
+    opacity: 0;
     font-size: 12px;
-    margin-bottom: 16px;
+    margin: 0;
 }
 
 
@@ -230,33 +223,6 @@ iframe{
         margin-top: 16px;
     }
 
-    .col-md-4{
-        display: flex;
-        justify-content: center;
-    }
-
-    .modal-body{
-        display: flex;
-        justify-content: center;
-    }
-
-    .modal-dialog .modal-body{
-        flex-direction: column;
-    }
-
-    .textSlide{
-        display: none;
-    }
-
-    h5{
-        display: block !important;
-    }
-
-
-    form{
-        width: 100%;
-    }
-
     .btn{
         width: 100%;
     }
@@ -273,10 +239,6 @@ iframe{
 
 @media (min-width: 768px){
 
-    .modal-dialog-centered .modal-body img{
-        width: 90%;
-    }
-
     .modal-body{
         display: flex;
         flex-direction: column;
@@ -289,10 +251,4 @@ iframe{
         width: 100%;
     }
 
-}
-
-@media (min-width: 1000px){
-    .modal-dialog-centered .modal-body img{
-        width: 100%;
-    }
 }
