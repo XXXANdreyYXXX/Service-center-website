@@ -31,8 +31,10 @@ function Theme1() {
 
     var butt = document.querySelectorAll('.btn-secondary');
     butt.forEach(element => {
-        element.classList.remove('btn-secondary');
-        element.classList.add('btn-primary');
+        if(!element.classList.contains("btnClose")){
+            element.classList.remove('btn-secondary');
+            element.classList.add('btn-primary');
+        }
     });
 
     var modalHead = document.querySelector(".formHeader");
@@ -86,14 +88,9 @@ function Theme2() {
 
     var butt = document.querySelectorAll('.btn-primary');
     butt.forEach(element => {
-            element.classList.add('btn-secondary');
-            element.classList.remove('btn-primary');
+        element.classList.add('btn-secondary');
+        element.classList.remove('btn-primary');
     });
-
-    var closeButton = document.querySelector(".btn-close");
-    if (closeButton) {
-        closeButton.classList.add("btn-close-white")
-    }
 
     var modalHead = document.querySelector(".formHeader");
     if (modalHead) {
