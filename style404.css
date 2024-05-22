@@ -35,6 +35,16 @@
 .err{
     text-align: center;
     font-size: 120px;
+    animation: shadowAnimation 2s linear infinite alternate-reverse;
+}
+
+@keyframes shadowAnimation {
+    0% {
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); /* Начальная тень */
+    }
+    100% {
+        text-shadow: 10px 10px 20px rgba(0, 0, 0, 1); /* Конечная тень */
+    }
 }
 
 a{
