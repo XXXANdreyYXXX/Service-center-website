@@ -1,3 +1,6 @@
+p {
+    font-size: 18px;
+}
 /* Меню */
 .nav-link {
     color: white !important;
