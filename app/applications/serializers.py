@@ -9,5 +9,5 @@ class ApplicationModel:
         self.description = description
 
 
-#class ApplicationSerializer(serializers.Serializer): 
-     
+class ApplicationSerializer(serializers.Serializer): 
+    
