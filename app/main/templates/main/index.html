@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт электронной техники</title>
+    <link href="style.css" rel="stylesheet" id="stylesheet">
+    <link rel="shortcut icon" href="img/free-icon-electronics-5765410.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Подключаем chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="menu">
+        <div class="container">
+            <div class="navbar navbar-dark bg-primary navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="img/Logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto me-2" _msthash="234">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Каталог услуг
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="Services/laptopRepair.html">Ремонт ноутбуков</a>
+                                <a class="dropdown-item" href="Services/computerRepair.html">Ремонт компьютеров</a>
+                                <a class="dropdown-item" href="Services/monoblockRepair.html">Ремонт моноблоков</a>
+                                <a class="dropdown-item" href="Services/phoneRepair.html">Ремонт телефонов</a>
+                                <a class="dropdown-item" href="Services/tabletRepair.html">Ремонт планшетов</a>
+                                <a class="dropdown-item" href="Services/tvRepair.html">Ремонт телевизоров</a>
+                                <a class="dropdown-item" href="Services/monitorRepair.html">Ремонт мониторов</a>
+                                <a class="dropdown-item" href="Services/printerRepair.html">Ремонт принтеров</a>
+                                <a class="dropdown-item" href="Services/scannerRepair.html">Ремонт сканеров</a>
+                                <a class="dropdown-item" href="Services/otherEquipmentRepair.html">Ремонт другой техники</a>
+                                <a class="dropdown-item" href="Services/callingMaster.html">Вызов мастера</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">Контакты</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                О компании
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="aboutTheCompany/aboutUs.html">О нас</a>
+                                <a class="dropdown-item" href="aboutTheCompany/jobs.html">Вакансии</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="status.html" class="nav-link">Статус ремонта</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary  btnMenu" style="padding: 8px; font-size: 18px; font-weight: 500;" onclick="Theme()">Поменять тему</button>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Тело сайта -->
+    <section>
+
+        <div class="caroudel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+                <ol class="carousel-indicators">
+                    <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+                    <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                    <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/slide1.jpg" class="d-block w-100" alt="слайд 1">
+                        <div class="carousel-caption">
+                            <h5>У наших мастеров огромный опыт работы</h5>
+                            <p class="textSlide">
+                                Наши мастера опытны в ремонте и обслуживании компьютерной техники для домашних и 
+                                корпоративных клиентов, гарантируя высокое качество работы.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/slide2.jpg" class="d-block w-100" alt="слайд 2">
+                        <div class="carousel-caption">
+                            <h5>В нашем магазине большой ассортимент аксесуаров</h5>
+                            <p class="textSlide">
+                                В нашем магазине вы найдете широкий ассортимент аксессуаров для телефонов, включая чехлы, 
+                                пленки, наушники и зарядные устройства. Мы предлагаем лучшие и инновационные решения, следя 
+                                за последними тенденциями.
+                            </p>
+                        </div>
+                    </div>
+                        <div class="carousel-item">
+                        <img src="img/slide3.jpg" class="d-block w-100" alt="слайд 3" >
+                        <div class="carousel-caption">
+                            <h5>У нас приемлемые цены</h5>
+                            <p class="textSlide">
+                                В нашем магазине вы найдете передовые продукты по доступным ценам. 
+                                Мы предлагаем лучшее соотношение цены и качества, чтобы современные устройства были доступны каждому.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="heading">
+                <h2 class="headingLeft">СЕРВИСНЫЙ ЦЕНТР <b>SERVICE CENTER</b> - ВЕРНЕМ ВАШУ ТЕХНИКУ К ЖИЗНИ!</h2>
+                <img src="img/master1.webp" class="headingImg" alt="Тут должна быть картинка">
+            </div>
+    
+            <p class="text">Сервисный центр SERVICE CENTER - это не просто место ремонта техники, это место, где 
+                мы с любовью и профессионализмом восстанавливаем вашу технику. Мы понимаем, 
+                насколько важны для вас ваши устройства, поэтому предлагаем качественные услуги 
+                по ремонту и обслуживанию, чтобы ваши гаджеты работали безупречно и долго. Доверьте 
+                нам свои технические проблемы, и мы сделаем все возможное, чтобы вернуть вам рабочее 
+                состояние вашей техники в кратчайшие сроки.
+            </p>
+    
+            <div class="heading head2">
+                <img src="img/comp.webp" class="headingImg" alt="Тут должна быть картинка">
+                <h2 class="headingRight">ХОТИТЕ ОБНОВИТЬ СВОЙ КОМПЬЮТЕР? <b>SERVICE CENTER</b> ПОМОЖЕТ ВАМ!</h2>
+            </div>
+    
+            <p class="text">Хотите освежить свой компьютер? SERVICE CENTER поможет вам в этом! Наши полки полны широкого 
+                выбора компонентов и аксессуаров, готовых привнести новую жизнь в ваше устройство. Наши консультанты 
+                всегда готовы помочь вам выбрать идеальные обновления, подходящие вашим потребностям. Доверьтесь SERVICE 
+                CENTER и наслаждайтесь улучшенным опытом работы с вашим компьютером!
+            </p>
+    
+            <div class="heading">
+                <h2 class="headingLeft">НУЖЕН ЧЕХОЛ ДЛЯ НОВОГО ТЕЛЕФОНА? ВАМ В <b>SERVICE CENTER</b></h2>
+                <img src="img/iphone.webp" class="headingImg iphoneImg" alt="Тут должна быть картинка">
+            </div>
+    
+            <p class="text">Вам нужен чехол для своего нового телефона? Обратитесь в SERVICE CENTER! У нас вас ждет 
+                огромный выбор аксессуаров, включая стильные и надежные чехлы для защиты вашего устройства. Наши 
+                консультанты всегда готовы помочь вам выбрать идеальный чехол, который подойдет как по функциональности, 
+                так и по дизайну. Защитите свой телефон с SERVICE CENTER!
+            </p>
+    
+            <h2 class="HeadingText">СЕРТИФИКАТЫ</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="gallery" class="row"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="HeadingText">Количество отремонтированной техники за прошлый год (в %)</h2>
+            <canvas id="repairChart"></canvas>
+
+            <div class="orderCall">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Заказать звонок
+                </button>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade window" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Заказать звонок</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <label for="">Ваше имя</label>
+                                <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" class = 'textField'>
+                                <p id="errName">Поле 'Имя' не должно содержать цифры и длиной больше 2 символов!</p>
+                                <label for="">Ваш номер телефона</label>
+                                <input type="text" id="phone" class="form-control" placeholder="+77777777777" maxlength="12" class = 'textField'>
+                                <p id="errPhone">Поле 'Телефон' должно соответствовать шаблону: +7XXXXXXXXXX</p>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btnClose" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="button" class="btn btn-primary" data-bs-target="#exampleModal" id="order" onclick="Call()">Заказать звонок</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div>
+                <p id="address">Наш адрес: ул. Магжана Жумабаева 114</p>
+                <p>Телефон: <a href="tel: +77478061122" class="link">+7-747-806-11-22</a></p>
+                <p>Email: <a href="mailto:servicecenter@gmail.com" class="link">servicecenter@gmail.com</a></p>
+                <p><a href="mailto:servicecenter@gmail.com" class="link">Хочу у вас работать</a></p>
+                <p>Наши соц. сети:</p>
+                <div>
+                    <a href="#" class="network">
+                        <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_25_316)">
+                            <rect x="7" y="17" width="67" height="47" fill="white"/>
+                            <path d="M72.5 0H7.5C3.375 0 0 3.375 0 7.5V72.5C0 76.625 3.375 80 7.5 80H72.5C76.625 80 80 76.625 80 72.5V7.5C80 3.375 76.625 0 72.5 0ZM64.795 56L57.48 56.11C57.48 56.11 55.9 56.425 53.84 55C51.105 53.125 48.525 48.235 46.51 48.875C44.48 49.515 44.54 53.905 44.54 53.905C44.54 53.905 44.555 54.845 44.085 55.34C43.585 55.885 42.585 55.995 42.585 55.995H39.32C39.32 55.995 32.1 56.435 25.74 49.805C18.8 42.585 12.68 28.26 12.68 28.26C12.68 28.26 12.32 27.32 12.71 26.87C13.145 26.355 14.32 26.325 14.32 26.325L22.15 26.28C22.15 26.28 22.885 26.405 23.415 26.795C23.855 27.11 24.085 27.715 24.085 27.715C24.085 27.715 25.35 30.92 27.025 33.81C30.29 39.45 31.82 40.685 32.93 40.09C34.54 39.215 34.055 32.105 34.055 32.105C34.055 32.105 34.085 29.525 33.245 28.385C32.59 27.495 31.355 27.23 30.825 27.165C30.385 27.1 31.105 26.085 32.045 25.62C33.45 24.93 35.935 24.885 38.875 24.915C41.155 24.93 41.83 25.085 42.72 25.29C45.425 25.945 44.5 28.46 44.5 34.495C44.5 36.435 44.155 39.15 45.545 40.04C46.14 40.43 47.605 40.1 51.28 33.87C53.015 30.915 54.325 27.45 54.325 27.45C54.325 27.45 54.605 26.825 55.045 26.56C55.5 26.295 56.11 26.375 56.11 26.375L64.345 26.33C64.345 26.33 66.815 26.035 67.22 27.16C67.64 28.33 66.3 31.065 62.94 35.55C57.425 42.91 56.8 42.22 61.395 46.47C65.77 50.535 66.675 52.515 66.835 52.765C68.615 55.765 64.805 56 64.805 56H64.795Z" fill="#0A87CF"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_25_316">
+                            <rect width="80" height="80" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+    
+                    <a href="#" class="network">
+                        <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_25_318)">
+                            <path d="M61.25 0H18.75C8.39466 0 0 8.39466 0 18.75V61.25C0 71.6053 8.39466 80 18.75 80H61.25C71.6053 80 80 71.6053 80 61.25V18.75C80 8.39466 71.6053 0 61.25 0Z" fill="url(#paint0_radial_25_318)"/>
+                            <path d="M61.25 0H18.75C8.39466 0 0 8.39466 0 18.75V61.25C0 71.6053 8.39466 80 18.75 80H61.25C71.6053 80 80 71.6053 80 61.25V18.75C80 8.39466 71.6053 0 61.25 0Z" fill="url(#paint1_radial_25_318)"/>
+                            <path d="M40.0028 8.75C31.5159 8.75 30.4506 8.78719 27.1175 8.93875C23.7906 9.09125 21.5197 9.61781 19.5328 10.3906C17.4772 11.1888 15.7338 12.2566 13.9969 13.9941C12.2584 15.7312 11.1906 17.4747 10.39 19.5294C9.615 21.5169 9.08781 23.7887 8.93812 27.1141C8.78906 30.4475 8.75 31.5131 8.75 40.0003C8.75 48.4875 8.7875 49.5494 8.93875 52.8825C9.09188 56.2094 9.61844 58.4803 10.3906 60.4672C11.1894 62.5228 12.2572 64.2663 13.9947 66.0031C15.7313 67.7416 17.4747 68.8119 19.5288 69.61C21.5172 70.3828 23.7884 70.9094 27.1147 71.0619C30.4481 71.2134 31.5125 71.2506 39.9991 71.2506C48.4869 71.2506 49.5488 71.2134 52.8819 71.0619C56.2088 70.9094 58.4822 70.3828 60.4706 69.61C62.5253 68.8119 64.2662 67.7416 66.0025 66.0031C67.7409 64.2663 68.8084 62.5228 69.6094 60.4681C70.3775 58.4803 70.905 56.2087 71.0612 52.8831C71.2109 49.55 71.25 48.4875 71.25 40.0003C71.25 31.5131 71.2109 30.4481 71.0612 27.1147C70.905 23.7878 70.3775 21.5172 69.6094 19.5303C68.8084 17.4747 67.7409 15.7312 66.0025 13.9941C64.2644 12.2559 62.5259 11.1881 60.4688 10.3909C58.4766 9.61781 56.2044 9.09094 52.8775 8.93875C49.5441 8.78719 48.4828 8.75 39.9931 8.75H40.0028ZM37.1994 14.3816C38.0316 14.3803 38.96 14.3816 40.0028 14.3816C48.3469 14.3816 49.3356 14.4116 52.6306 14.5613C55.6775 14.7006 57.3312 15.2097 58.4328 15.6375C59.8913 16.2038 60.9309 16.8809 62.0241 17.975C63.1178 19.0688 63.7947 20.1103 64.3625 21.5687C64.7903 22.6687 65.3 24.3225 65.4388 27.3694C65.5884 30.6637 65.6209 31.6531 65.6209 39.9931C65.6209 48.3331 65.5884 49.3228 65.4388 52.6169C65.2994 55.6637 64.7903 57.3175 64.3625 58.4178C63.7963 59.8762 63.1178 60.9147 62.0241 62.0078C60.9303 63.1016 59.8919 63.7784 58.4328 64.345C57.3325 64.7747 55.6775 65.2825 52.6306 65.4219C49.3363 65.5716 48.3469 65.6041 40.0028 65.6041C31.6584 65.6041 30.6694 65.5716 27.3753 65.4219C24.3284 65.2813 22.6747 64.7722 21.5722 64.3444C20.1141 63.7778 19.0722 63.1009 17.9784 62.0072C16.8847 60.9134 16.2078 59.8744 15.64 58.4153C15.2122 57.315 14.7025 55.6612 14.5638 52.6144C14.4141 49.32 14.3841 48.3306 14.3841 39.9853C14.3841 31.6403 14.4141 30.6559 14.5638 27.3616C14.7031 24.3147 15.2122 22.6609 15.64 21.5594C16.2066 20.1009 16.8847 19.0594 17.9788 17.9656C19.0725 16.8719 20.1141 16.1947 21.5725 15.6272C22.6741 15.1975 24.3284 14.6897 27.3753 14.5497C30.2581 14.4194 31.3753 14.3803 37.1994 14.3737V14.3816ZM56.6841 19.5703C54.6138 19.5703 52.9341 21.2484 52.9341 23.3191C52.9341 25.3894 54.6138 27.0691 56.6841 27.0691C58.7544 27.0691 60.4341 25.3894 60.4341 23.3191C60.4341 21.2488 58.7544 19.5691 56.6841 19.5691V19.5703ZM40.0028 23.9519C31.1403 23.9519 23.9547 31.1375 23.9547 40.0003C23.9547 48.8631 31.1403 56.0453 40.0028 56.0453C48.8656 56.0453 56.0488 48.8631 56.0488 40.0003C56.0488 31.1378 48.865 23.9519 40.0022 23.9519H40.0028ZM40.0028 29.5834C45.7556 29.5834 50.4197 34.2469 50.4197 40.0003C50.4197 45.7531 45.7556 50.4172 40.0028 50.4172C34.2497 50.4172 29.5863 45.7531 29.5863 40.0003C29.5863 34.2469 34.2497 29.5834 40.0028 29.5834Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <radialGradient id="paint0_radial_25_318" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.25 86.1616) rotate(-90) scale(79.2859 73.7422)">
+                            <stop stop-color="#FFDD55"/>
+                            <stop offset="0.1" stop-color="#FFDD55"/>
+                            <stop offset="0.5" stop-color="#FF543E"/>
+                            <stop offset="1" stop-color="#C837AB"/>
+                            </radialGradient>
+                            <radialGradient id="paint1_radial_25_318" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-13.4003 5.76281) rotate(78.681) scale(35.4413 146.09)">
+                            <stop stop-color="#3771C8"/>
+                            <stop offset="0.128" stop-color="#3771C8"/>
+                            <stop offset="1" stop-color="#6600FF" stop-opacity="0"/>
+                            </radialGradient>
+                            <clipPath id="clip0_25_318">
+                            <rect width="80" height="80" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                            
+                    </a>
+    
+                    <a href="#" class="network">
+                        <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_25_323)">
+                            <rect x="6" y="10" width="67" height="70" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M75.584 0H4.416C1.976 0 0 1.976 0 4.416V75.584C0 78.024 1.976 80 4.416 80H42.728V49.02H32.304V36.948H42.728V28.04C42.728 17.704 49.04 12.08 58.26 12.08C62.676 12.08 66.468 12.408 67.576 12.556V23.356H61.184C56.168 23.356 55.2 25.74 55.2 29.236V36.944H67.156L65.596 49.016H55.196V80H75.584C78.024 80 80 78.024 80 75.584V4.416C80 1.976 78.024 0 75.584 0Z" fill="#0A87CF"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_25_323">
+                            <rect width="80" height="80" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>  
+                    </a>                  
+                            
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b64eb4de77de498895d5e388540082b3cfe1294693106efca6dbca04e10a4b1&amp;source=constructor" frameborder="0"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="photoGallery.js"></script>
+    <script src="call.js"></script>
+    <script src="chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="theme.js"></script>
+
+</body>
+</html>

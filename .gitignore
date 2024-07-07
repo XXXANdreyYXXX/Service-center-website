@@ -1,3 +1,13 @@
+1/
+.pylintrc
+__pycache__
+
+.vscode
+
+
+db.sqlite3
+media/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
