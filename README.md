@@ -1,69 +1,8 @@
-# Service-center
+# React + Vite
 
-Сайт сервис центра. Backend на Django. API - Django Rest Framework.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Backend
+Currently, two official plugins are available:
 
-### ORM модели Django
-
-#### Employees
-
-Содержит информацию о сотрудниках.\
-Поля:
-
-- Имя
-- Должность
-- Опыт
-- Фото
-
-#### Services-category
-
-Содержит категории услуг. На эту таблицу ссылаются услуги.\
-Поля:
-
-- Название категории
-
-#### Services
-
-Таблица в которой хранятся записи услуг.\
-Поля:
-
-- Катагория - внешний ключ на category
-- Цена
-- Гарантия
-
-#### PopularServices
-
-Таблица в которой хранятся записи популярных услуг.\
-Поля:
-
-- Внешний ключ на услугу
-
-#### AnotherServices
-
-Таблица в которой хранятся записи услуг в разделе "Другие услуги".\
-Поля:
-
-- Внешний ключ на услугу
-
-#### Application
-
-Таблица с заявками на вызов мастера
-
-- Имя
-- Телефон
-- Внешний ключ на DeviceType
-- Описание проблемы
-
-#### DeviceType
-
-Таблица с видами устройств
-
-- Вид устройства
-
-#### Orders
-
-Таблица с заказами
-
-- Номер заказа
-- Статус ремонта
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
