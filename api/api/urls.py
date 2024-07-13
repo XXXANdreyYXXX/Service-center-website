@@ -16,10 +16,16 @@ Including another URLconf
 """
 from email.mime import application
 from django.contrib import admin
-from django.urls import path
-from applications.views import ApplicationApiView
+from django.urls import path, include
+from applications.views import *
+from rest_framework import routers
 
+router = routers.SimpleRouter()
+router.register(r'client-applications', ClientApplicationViewSet, basename='client')
+router.register(r'employee-applications', EmployeeApplicationViewSet, basename='employee')
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/applicationslist', ApplicationApiView.as_view())
+    path('api/v1/',include(router.urls)),
+    path('api/v1/auth', include('rest_framework.urls'))
+    
 ]

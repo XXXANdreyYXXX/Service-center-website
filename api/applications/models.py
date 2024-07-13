@@ -1,5 +1,6 @@
 from django.db import models
-from clients.models import ClientProfile
+from accounts.models import User
+from datetime import datetime
 # Create your models here.
 
 
@@ -14,9 +15,11 @@ class DeviceType(models.Model):
 class Application(models.Model):
     '''Таблица заявок на ремонт'''
 
-    client = models.ForeignKey(ClientProfile, on_delete=models.CASCADE)
+    client = models.ForeignKey(User, on_delete=models.CASCADE)
     device = models.ForeignKey(DeviceType, on_delete=models.CASCADE, default=1)
     description = models.TextField()
+    time_create = models.DateTimeField(auto_now_add=True)
+    time_update = models.DateTimeField(null=True, blank=True)
     status_choices = [('C', 'На рассмотрении'), ('P', 'В процессе работы'), ('D', 'Готов к получению')]
     status = models.CharField(max_length=1, choices=status_choices)
     def __str__(self):

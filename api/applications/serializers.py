@@ -1,4 +1,7 @@
+import io
 from rest_framework import serializers
+from rest_framework.renderers import JSONRenderer
+from rest_framework.parsers import JSONParser
 from applications.models import Application
 
 
@@ -9,5 +12,10 @@ class ApplicationModel:
         self.description = description
 
 
-class ApplicationSerializer(serializers.Serializer): 
+class ApplicationSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Application
+        fields = "__all__"
+
     
