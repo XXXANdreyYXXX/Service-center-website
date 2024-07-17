@@ -13,3 +13,8 @@ class EmployeeProfile(models.Model):
     def __str__(self):
         return f"{self.user} {self.position} "
     
+    class Meta:
+        verbose_name = 'Сотрудник'
+        verbose_name_plural = 'Сотрудники'
+        
+    

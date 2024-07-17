@@ -1,32 +1,43 @@
-from curses.ascii import EM
-from django.forms import model_to_dict
-from django.shortcuts import render
-from rest_framework import generics, viewsets, mixins
+
+from rest_framework import mixins
 from rest_framework.viewsets import GenericViewSet
-from .models import Application
-from rest_framework.views import APIView, Response
+from rest_framework.exceptions import MethodNotAllowed
 from rest_framework.permissions import IsAuthenticated
 from .models import Application
-from .serializers import ApplicationSerializer
+from .serializers import *
 from .permissions import *
-from .application_services import get_client_applications
 # Create your views here.
 
 
-class EmployeeApplicationViewSet(viewsets.ModelViewSet):
+class EmployeeApplicationViewSet(
+                   mixins.RetrieveModelMixin,
+                   mixins.UpdateModelMixin,
+                   mixins.DestroyModelMixin,
+                   mixins.ListModelMixin,
+                   GenericViewSet):
     queryset = Application.objects.all()
-    serializer_class = ApplicationSerializer
-    permission_classes = [EmployeePermission]
+    serializer_class = ApplicationEmployeeSerializer
+    permission_classes = [IsEmployee]
 
+    def perform_destroy(self, instance):
+        instance.is_archived=True
+        instance.save()
+    
+    
+    
 class ClientApplicationViewSet(mixins.CreateModelMixin,
                    mixins.RetrieveModelMixin,
                    mixins.ListModelMixin,
                    GenericViewSet):
-    serializer_class = ApplicationSerializer
-    permission_classes = [ClientPermission, IsAuthenticated]
-    def get_queryset(self):
-        return get_client_applications(self.request)
+    serializer_class = ApplicationClientSerializer
+    permission_classes = [IsAuthenticated, IsClient]
 
+    def get_queryset(self):
+        return Application.objects.filter(client=self.request.user)
+    
+    def perform_create(self, serializer):
+        serializer.save(client=self.request.user)
+        
 
 # class ApplicationApiView(APIView):
 

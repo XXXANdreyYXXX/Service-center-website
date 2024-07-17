@@ -10,6 +10,10 @@ class ServiceCategory(models.Model):
     def __str__(self):
         return f"{self.category_name}"
 
+    class Meta:
+        verbose_name = 'Категория услуг'
+        verbose_name_plural = 'Категории услуг'
+        
 
 class Service(models.Model):
     """Общая табличка услуг"""
@@ -20,7 +24,12 @@ class Service(models.Model):
     warranty_period = models.DurationField()
 
     def __str__(self):
-        return f"{self.category}"
+        return f"{self.category} {self.name}"
+    
+    class Meta:
+        verbose_name = 'Услуга'
+        verbose_name_plural = 'Услуги'
+        
 
 
 class PopularService(models.Model):
@@ -30,6 +39,11 @@ class PopularService(models.Model):
 
     def __str__(self):
         return f"{self.service}"
+    
+    class Meta:
+        verbose_name = 'Популярная услуга'
+        verbose_name_plural = 'Популярные услуги'
+        
 
 class AnotherService(models.Model):
     """Табличка других услуг"""
@@ -38,3 +52,8 @@ class AnotherService(models.Model):
 
     def __str__(self):
         return f"{self.service}"
+    
+    class Meta:
+        verbose_name = 'Другая услуга'
+        verbose_name_plural = 'Другие услуги'
+        

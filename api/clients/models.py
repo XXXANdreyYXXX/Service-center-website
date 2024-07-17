@@ -11,3 +11,7 @@ class ClientProfile(models.Model):
     def __str__(self):
         return f"{self.user}"
     
+    class Meta:
+        verbose_name = 'Клиент'
+        verbose_name_plural = 'Клиенты'
+        
