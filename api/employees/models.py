@@ -8,7 +8,7 @@ class EmployeeProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,  verbose_name=_("User"))
     position = models.CharField(max_length=50,  verbose_name=_("Должность"))
     experience_years = models.FloatField(default=0.0, verbose_name=_("Лет опыта"))
-    photo = models.ImageField(upload_to='employee_photos/', blank=True, null=True, verbose_name=_("Фотография"))
+    photo = models.ImageField(upload_to='media/employees_photos', blank=True, null=True, verbose_name=_("Фотография"))
     
     def __str__(self):
         return f"{self.user} {self.position} "

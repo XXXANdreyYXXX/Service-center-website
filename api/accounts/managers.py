@@ -5,11 +5,8 @@ class UserManager(BaseUserManager):
 
     def create_user(self, email, last_name, first_name, phone_number, password, **extra_fields):
         if not (email and last_name and first_name and phone_number and password):
-            
             raise ValueError('Все поля обязательны')
-        print(123123123)
         email = self.normalize_email(email)
-        
         user = self.model(email=email, last_name=last_name, first_name=first_name, phone_number=phone_number, password=password, **extra_fields)
         print(user)
         user.set_password(password)
